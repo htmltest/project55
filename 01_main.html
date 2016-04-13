@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>ЖК «Союзный»</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700,700italic,800&amp;subset=latin,cyrillic" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/cocoen/cocoen.min.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
+
+        <script src="js/jquery-2.2.2.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/cocoen/cocoen.min.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=1280" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <!-- side -->
+            <div class="side">
+
+                <div class="side-container">
+                    <div class="side-content">
+                        <div class="logo"><img src="images/logo.png" alt="" width="102" height="59" /></div>
+
+                        <nav>
+                            <ul>
+                                <li><a href="#"><span>О жилом комплексе «Союзный»</span></a></li>
+                                <li><a href="#"><span>Расположение и&nbsp;инфраструктура</span></a></li>
+                                <li><a href="#"><span>Выбор квартиры по&nbsp;параметрам</span></a></li>
+                                <li><a href="#"><span>Акции и&nbsp;спецпредложения</span></a></li>
+                                <li><a href="#"><span>Фотогалерея</span></a></li>
+                                <li><a href="#"><span>О застройщике</span></a></li>
+                                <li><a href="#"><span>Контакты</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <a href="#" class="side-link"></a>
+
+                <a href="#" class="callback-link"></a>
+
+                <div class="callback">
+                    <h2>Обратный звонок</h2>
+                    <form action="windows/success.html" method="post" class="ajaxForm">
+                        <div class="form-label">Телефон <span>*</span></div>
+                        <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" /></div>
+
+                        <div class="form-label">Имя</div>
+                        <div class="form-input"><input type="text" name="name" value="" /></div>
+
+                        <div class="form-required"><span>*</span> – поля, обязательные к заполнению</div>
+
+                        <div class="form-submit"><input type="submit" value="Отправить" /></div>
+                    </form>
+
+                    <a href="#" class="callback-close"></a>
+                </div>
+
+            </div>
+            <!-- side END -->
+
+            <!-- wrapper inner -->
+            <div class="wrapper-inner">
+
+                <!-- slider -->
+                <div class="slider">
+                    <div class="slider-content">
+                        <ul>
+                            <li class="active">
+                                <div class="slider-bg" style="background-image:url(files/slider-1.jpg)"></div>
+                            </li>
+                            <li>
+                                <div class="slider-bg" style="background-image:url(files/slider-2.jpg)"></div>
+                            </li>
+                            <li>
+                                <div class="slider-bg" style="background-image:url(files/slider-3.jpg)"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="slider-ctrl">
+                        <div class="slider-preview">
+                            <ul>
+                                <li class="active"><a href="#"><img src="files/slider-preview-1.jpg" alt="" width="78" height="58" /><span></span></a></li>
+                                <li><a href="#"><img src="files/slider-preview-2.jpg" alt="" width="78" height="58" /><span></span></a></li>
+                                <li><a href="#"><img src="files/slider-preview-3.jpg" alt="" width="78" height="58" /><span></span></a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="webcam-main"></a>
+                    </div>
+                    <div class="slider-inner">
+                        <div class="slider-title">Квартиры<br />в Одинцово</div>
+                        <div class="slider-text">в 7 минутах ходьбы<br />от центральной ж/д станции! </div>
+                    </div>
+
+                    <!-- search -->
+                    <div class="search">
+                        <h2>Поиск квартиры по параметрам</h2>
+                        <form action="#" method="post">
+                            <div class="search-cols">
+                                <div class="search-col">
+                                    <div class="form-select">
+                                        <select name="rooms" data-placeholder="Количество комнат">
+                                            <option value=""></option>
+                                            <option value="0">Любое</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="search-col">
+                                    <div class="form-select">
+                                        <select name="price" data-placeholder="Цена, руб.">
+                                            <option value=""></option>
+                                            <option value="1">от 5.250.000 Р</option>
+                                            <option value="2">от 6.250.000 Р</option>
+                                            <option value="3">от 7.250.000 Р</option>
+                                            <option value="4">от 8.250.000 Р</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-submit"><input type="submit" value="Найти" /></div>
+                            </div>
+
+                        </form>
+                    </div>
+                    <!-- search END -->
+
+                </div>
+                <!-- slider END -->
+
+                <!-- hot -->
+                <div class="hot">
+                    <div class="hot-campaigns">
+                        <div class="hot-preview">
+                            <a href="#">
+                                <img src="files/hot-1.jpg" alt="" />
+                                <div>Горячая акция!</div>
+                            </a>
+                        </div>
+                        <div class="hot-title"><a href="#">Бронь на 10 дней</a></div>
+                        <div class="hot-date">Срок действия акции: бессрочно<br />Квартиры по акции: Все доступные квартиры</div>
+                        <div class="hot-anonce">Клиент может без оплаты забронировать квартиру в офисе продаж на срок 10 дней с сохранением ее стоимости. Акция не распространяется на Спецпредложения застройщика</div>
+                    </div>
+
+                    <div class="hot-news">
+                        <div class="hot-preview">
+                            <a href="#">
+                                <img src="files/hot-2.jpg" alt="" />
+                                <div>Горячая новость!</div>
+                            </a>
+                        </div>
+                        <div class="hot-title"><a href="#">Спешите купить квартиры по выгодным ценам с экономией до 1,0 млн.!</a></div>
+                        <div class="hot-anonce">Акция действует по 31 марта 2016 г. на 1-комнатные, 2-комнатные и 3-комнатные квартиры в 1, 2, 3 ,4 и 5 секциях жилого комплекса. Ознакомиться с полным перечнем квартир, участвующих в акции, можно кликнув на интересующий блок выше. Предложение ограничено. Подробности уточняйте у менеджеров по продажам.</div>
+                    </div>
+                </div>
+                <!-- hot END -->
+
+                <!-- plans -->
+                <div class="plans">
+                    <div class="plans-container">
+
+                        <!-- plans filter -->
+                        <div class="plans-filter">
+                            <h3>Количество комнат</h3>
+
+                            <ul class="plans-rooms">
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                            </ul>
+
+                            <!-- plans rooms tabs -->
+                            <div class="plans-rooms-tabs">
+
+                                <!-- plans rooms tab -->
+                                <div class="plans-rooms-tab active">
+                                    <ul class="plans-types">
+                                        <li class="active"><a href="#"><img src="files/plans-types-1-1.png" alt="" width="85" height="112" /></a></li>
+                                        <li><a href="#"><img src="files/plans-types-1-2.png" alt="" width="100" height="124" /></a></li>
+                                        <li><a href="#"><img src="files/plans-types-1-3.png" alt="" width="124" height="100" /></a></li>
+                                    </ul>
+
+                                    <!-- plans types tabs -->
+                                    <div class="plans-types-tabs">
+
+                                        <!-- plans types tab -->
+                                        <div class="plans-types-tab active">
+                                            <div class="plan-types-variants-title">Варианты</div>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="active">№</th>
+                                                        <th>Корпус</th>
+                                                        <th>Этаж</th>
+                                                        <th>Пл., м&sup2;</th>
+                                                        <th>Цена, руб.</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">1</td>
+                                                        <td style="text-align:center">1</td>
+                                                        <td style="text-align:center">12</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">5 855 847</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">2</td>
+                                                        <td style="text-align:center">1</td>
+                                                        <td style="text-align:center">11</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">5 855 847</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">3</td>
+                                                        <td style="text-align:center">3</td>
+                                                        <td style="text-align:center">5</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">5 855 847</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <a href="#" class="plan-types-variants-more">Больше вариантов</a>
+                                        </div>
+                                        <!-- plans types tab END -->
+
+                                        <!-- plans types tab -->
+                                        <div class="plans-types-tab">
+                                            <div class="plan-types-variants-title">Варианты</div>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="active">№</th>
+                                                        <th>Корпус</th>
+                                                        <th>Этаж</th>
+                                                        <th>Пл., м&sup2;</th>
+                                                        <th>Цена, руб.</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">1</td>
+                                                        <td style="text-align:center">1</td>
+                                                        <td style="text-align:center">12</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">6 855 847</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">2</td>
+                                                        <td style="text-align:center">1</td>
+                                                        <td style="text-align:center">11</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">6 855 847</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">3</td>
+                                                        <td style="text-align:center">3</td>
+                                                        <td style="text-align:center">5</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">6 855 847</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <a href="#" class="plan-types-variants-more">Больше вариантов</a>
+                                        </div>
+                                        <!-- plans types tab END -->
+
+                                        <!-- plans types tab -->
+                                        <div class="plans-types-tab">
+                                            <div class="plan-types-variants-title">Варианты</div>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="active">№</th>
+                                                        <th>Корпус</th>
+                                                        <th>Этаж</th>
+                                                        <th>Пл., м&sup2;</th>
+                                                        <th>Цена, руб.</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">1</td>
+                                                        <td style="text-align:center">1</td>
+                                                        <td style="text-align:center">12</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">7 855 847</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">2</td>
+                                                        <td style="text-align:center">1</td>
+                                                        <td style="text-align:center">11</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">7 855 847</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">3</td>
+                                                        <td style="text-align:center">3</td>
+                                                        <td style="text-align:center">5</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">7 855 847</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <a href="#" class="plan-types-variants-more">Больше вариантов</a>
+                                        </div>
+                                        <!-- plans types tab END -->
+
+                                    </div>
+                                    <!-- plans types tabs END -->
+                                </div>
+                                <!-- plans rooms tab END -->
+
+                                <!-- plans rooms tab -->
+                                <div class="plans-rooms-tab">
+                                    <ul class="plans-types">
+                                        <li class="active"><a href="#"><img src="files/plans-types-1-2.png" alt="" width="100" height="124" /></a></li>
+                                        <li><a href="#"><img src="files/plans-types-1-3.png" alt="" width="124" height="100" /></a></li>
+                                    </ul>
+
+                                    <!-- plans types tabs -->
+                                    <div class="plans-types-tabs">
+
+                                        <!-- plans types tab -->
+                                        <div class="plans-types-tab active">
+                                            <div class="plan-types-variants-title">Варианты</div>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="active">№</th>
+                                                        <th>Корпус</th>
+                                                        <th>Этаж</th>
+                                                        <th>Пл., м&sup2;</th>
+                                                        <th>Цена, руб.</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">1</td>
+                                                        <td style="text-align:center">1</td>
+                                                        <td style="text-align:center">12</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">5 855 847</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">2</td>
+                                                        <td style="text-align:center">1</td>
+                                                        <td style="text-align:center">11</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">5 855 847</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">3</td>
+                                                        <td style="text-align:center">3</td>
+                                                        <td style="text-align:center">5</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">5 855 847</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <a href="#" class="plan-types-variants-more">Больше вариантов</a>
+                                        </div>
+                                        <!-- plans types tab END -->
+
+                                        <!-- plans types tab -->
+                                        <div class="plans-types-tab">
+                                            <div class="plan-types-variants-title">Варианты</div>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="active">№</th>
+                                                        <th>Корпус</th>
+                                                        <th>Этаж</th>
+                                                        <th>Пл., м&sup2;</th>
+                                                        <th>Цена, руб.</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">1</td>
+                                                        <td style="text-align:center">1</td>
+                                                        <td style="text-align:center">12</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">6 855 847</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">2</td>
+                                                        <td style="text-align:center">1</td>
+                                                        <td style="text-align:center">11</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">6 855 847</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">3</td>
+                                                        <td style="text-align:center">3</td>
+                                                        <td style="text-align:center">5</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">6 855 847</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <a href="#" class="plan-types-variants-more">Больше вариантов</a>
+                                        </div>
+                                        <!-- plans types tab END -->
+
+                                    </div>
+                                    <!-- plans types tabs END -->
+                                </div>
+                                <!-- plans rooms tab END -->
+
+                                <!-- plans rooms tab -->
+                                <div class="plans-rooms-tab">
+                                    <ul class="plans-types">
+                                        <li class="active"><a href="#"><img src="files/plans-types-1-2.png" alt="" width="100" height="124" /></a></li>
+                                    </ul>
+
+                                    <!-- plans types tabs -->
+                                    <div class="plans-types-tabs">
+
+                                        <!-- plans types tab -->
+                                        <div class="plans-types-tab active">
+                                            <div class="plan-types-variants-title">Варианты</div>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="active">№</th>
+                                                        <th>Корпус</th>
+                                                        <th>Этаж</th>
+                                                        <th>Пл., м&sup2;</th>
+                                                        <th>Цена, руб.</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">1</td>
+                                                        <td style="text-align:center">1</td>
+                                                        <td style="text-align:center">12</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">5 855 847</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">2</td>
+                                                        <td style="text-align:center">1</td>
+                                                        <td style="text-align:center">11</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">5 855 847</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="active" style="text-align:center">3</td>
+                                                        <td style="text-align:center">3</td>
+                                                        <td style="text-align:center">5</td>
+                                                        <td style="text-align:center">63,7</td>
+                                                        <td class="price" style="text-align:center">5 855 847</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <a href="#" class="plan-types-variants-more">Больше вариантов</a>
+                                        </div>
+                                        <!-- plans types tab END -->
+
+                                    </div>
+                                    <!-- plans types tabs END -->
+                                </div>
+                                <!-- plans rooms tab END -->
+
+                            </div>
+                            <!-- plans rooms tabs END -->
+                        </div>
+                        <!-- plans filter END -->
+
+                        <div class="plans-compare">
+                            <div class="cocoen">
+                                <img src="files/compare-before.png" alt="" />
+                                <img src="files/compare-after.png" alt="" />
+                            </div>
+                            <div class="plans-compare-text">Вы можете увидеть разницу между планировкой и готовым вариантом, зажав кнопку мыши и поелозив туда/сюда</div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- plans END -->
+
+                <!-- banners -->
+                <div class="banners">
+                    <a href="#" style="background-image:url(files/banner-1.jpg)">
+                        <div><strong>Военная ипотека</strong> Защитникам Отечества – особые условия покупки!</div>
+                    </a>
+                    <a href="#" style="background-image:url(files/banner-2.jpg)">
+                        <div><strong>Квартиры<br />от 3,17 млн рублей</strong> Ипотека в лучших банках России и еще 4 способа покупки квартир</div>
+                    </a>
+                    <a href="#" style="background-image:url(files/banner-3.jpg)">
+                        <div><strong>Скидки<br />до 1 млн рублей</strong> Купи 3-х комнатную квартиру и подари себе миллион!</div>
+                    </a>
+                </div>
+                <!-- banners END -->
+
+                <!-- main info -->
+                <div class="main-info">
+                    <div class="main-info-inner">
+                        <div class="main-info-wrap">
+                            <!-- main campaigns -->
+                            <div class="main-campaigns">
+                                <div class="main-info-title">Акции</div>
+                                <div class="main-info-list">
+                                    <div class="main-info-item">
+                                        <div class="main-info-item-preview"><a href="#"><img src="files/main-info-1.jpg" alt="" width="140" height="140" /></a></div>
+                                        <div class="main-info-item-text">
+                                            <div class="main-info-item-name"><a href="#">Бронь на 10 дней</a></div>
+                                            <div class="main-info-item-anonce">Клиент может без оплаты забронировать квартиру в офисе продаж на срок 10 дней с сохранением ее стоимости.</div>
+                                            <div class="main-info-item-date">Срок действия акции: бессрочно</div>
+                                        </div>
+                                    </div>
+                                    <div class="main-info-item">
+                                        <div class="main-info-item-preview"><a href="#"><img src="files/main-info-2.jpg" alt="" width="140" height="140" /></a></div>
+                                        <div class="main-info-item-text">
+                                            <div class="main-info-item-name"><a href="#">Выбери соседа</a></div>
+                                            <div class="main-info-item-anonce">Клиент может без оплаты забронировать квартиру</div>
+                                            <div class="main-info-item-date">Срок действия акции: бессрочно</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main-info-item-all"><a href="#" class="order-link">Все акции</a></div>
+                            </div>
+                            <!-- main campaigns END -->
+
+                            <!-- main news -->
+                            <div class="main-news">
+                                <div class="main-info-title">Новости</div>
+                                <div class="main-info-list">
+                                    <div class="main-info-item">
+                                        <div class="main-info-item-preview"><a href="#"><img src="files/main-info-3.jpg" alt="" width="140" height="140" /></a></div>
+                                        <div class="main-info-item-text">
+                                            <div class="main-info-item-name"><a href="#">Спешите купить квартиры по выгодным ценам с экономией до 1,0 млн.!</a></div>
+                                            <div class="main-info-item-date">21 марта 2016 года</div>
+                                        </div>
+                                    </div>
+                                    <div class="main-info-item">
+                                        <div class="main-info-item-preview"><a href="#"><img src="files/main-info-4.jpg" alt="" width="140" height="140" /></a></div>
+                                        <div class="main-info-item-text">
+                                            <div class="main-info-item-name"><a href="#">Организация взаимодействия оправдывает нестандартный подход</a></div>
+                                            <div class="main-info-item-date">21 марта 2016 года</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main-info-item-all"><a href="#" class="order-link">Все новости</a></div>
+                            </div>
+                            <!-- main news END -->
+                        </div>
+                    </div>
+                </div>
+                <!-- main info END -->
+
+                <!-- content -->
+                <div class="content">
+
+                    <!-- infrastructure -->
+                    <div class="infrastructure">
+                        <h2>Инфраструктура квартала и окружение</h2>
+                        <div class="infrastructure-photo"><img src="files/infrastructure.jpg" alt="" /></div>
+                        <h2>Социальная инфраструктура</h2>
+                        <div class="infrastructure-social">
+                            <div class="infrastructure-social-item">
+                                <div class="infrastructure-social-icon"><img src="images/infrastructure-icon-1.png" alt="" width="80" height="63" /></div>
+                                <div class="infrastructure-social-name">Два детских сада<br />на 450 мест</div>
+                            </div>
+                            <div class="infrastructure-social-item">
+                                <div class="infrastructure-social-icon"><img src="images/infrastructure-icon-2.png" alt="" width="74" height="66" /></div>
+                                <div class="infrastructure-social-name">Школа<br />на 1100 учеников</div>
+                            </div>
+                            <div class="infrastructure-social-item">
+                                <div class="infrastructure-social-icon"><img src="images/infrastructure-icon-3.png" alt="" width="84" height="64" /></div>
+                                <div class="infrastructure-social-name">Поликлиника<br />детская и взрослая<br />на 550 посещений</div>
+                            </div>
+                            <div class="infrastructure-social-item">
+                                <div class="infrastructure-social-icon"><img src="images/infrastructure-icon-4.png" alt="" width="76" height="63" /></div>
+                                <div class="infrastructure-social-name">Многоуровневый<br />паркинг<br />на 569 машиномест</div>
+                            </div>
+                            <div class="infrastructure-social-item">
+                                <div class="infrastructure-social-icon"><img src="images/infrastructure-icon-5.png" alt="" width="97" height="64" /></div>
+                                <div class="infrastructure-social-name">Магазины, кафе</div>
+                            </div>
+                        </div>
+                        <h3>Дополнительно будут построены</h3>
+                        <div class="infrastructure-add">
+                            <div class="infrastructure-add-col">
+                                <ul>
+                                    <li>Детский сад (ввод – весна 2017)</li>
+                                    <li>Школа (ввод лето 2017)</li>
+                                    <li>Паркинги</li>
+                                    <li>Деловой центр</li>
+                                    <li>Здание администрации (служба «одного окна»)</li>
+                                    <li>Собственный парк</li>
+                                </ul>
+                            </div>
+                            <div class="infrastructure-add-col">
+                                <ul>
+                                    <li>Многофункциональный центр (торговые ряды, рестораны, фитнес-клубы, кинотеатры, офисы)</li>
+                                    <li>Торгово-бытовой центр (осень 2016)</li>
+                                    <li>Кружки и секции по интересам для разных возрастных групп (2016-2017)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- infrastructure END -->
+
+                </div>
+                <!-- content END -->
+
+                <!-- map -->
+                <div class="map">
+                    <div id="map"></div>
+                    <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+                    <script type="text/javascript">
+                        ymaps.ready(init);
+
+                        var myMap;
+
+                        function init () {
+                            myMap = new ymaps.Map('map', {
+                                center: [56.136, 40.390],
+                                zoom: 14
+                            });
+
+                            myMap.controls.add('zoomControl');
+
+                            var myGeocoder = ymaps.geocode('Московская область, г. Одинцово, ул. Маковского, д. 26');
+                            myGeocoder.then(
+                                function (res) {
+                                    var coords = res.geoObjects.get(0).geometry.getCoordinates();
+                                    myPlacemark = new ymaps.Placemark(coords, {}, {
+                                        iconImageHref: 'images/map-icon.png',
+                                        iconImageSize: [71, 73],
+                                        iconImageOffset: [-29, -73]
+                                    });
+                                    myMap.geoObjects.add(myPlacemark);
+                                    myMap.setCenter(coords);
+                                    var position = myMap.getGlobalPixelCenter();
+                                    myMap.setGlobalPixelCenter([ position[0] - 190, position[1] ]);
+                                },
+                                function (err) {
+                                    alert('Ошибка');
+                                }
+                            );
+
+                        }
+                    </script>
+
+                    <!-- map container -->
+                    <div class="map-container">
+                        <div class="map-content">
+                            <div class="map-block">
+                                <div class="map-text">
+                                    <h3>Адрес объекта и офиса продаж</h3>
+
+                                    <p class="map-text-title">Адрес</p>
+                                    <p>Московская область,<br />г. Одинцово, ул. Маковского, д. 26</p>
+
+                                    <p class="map-text-title">Телефоны офиса продаж</p>
+                                    <p>+7 (495) 135-33-65</p>
+
+                                    <p class="map-text-title">электронная почта</p>
+                                    <p><a href="#">info@dom-souzny.ru</a><br /><a href="#">kprudnikova@dom-souzny.ru</a></p>
+                                </div>
+
+                                <div class="map-ways">
+                                    <div class="map-way-auto"><a href="#"></a></div>
+                                    <div class="map-way-foot"><a href="#"></a></div>
+                                    <a href="#" class="map-callback">Заказать звонок</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- map container END -->
+
+                </div>
+                <!-- map END -->
+
+            </div>
+            <!-- wrapper inner END -->
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="footer-inner">
+
+                <ul class="footer-menu">
+                    <li><a href="#">О комплексе</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Проектная декларация</a></li>
+                </ul>
+
+                <div class="footer-email"><a href="#">info@dom-souzny.ru</a></div>
+
+                <div class="footer-phone">+7 (495) 135-33-65</div>
+
+                <div class="copyrights">© 2016, ЖК «Союзный». Все права защищены.</div>
+
+                <div class="footer-social">
+                    <a href="#" class="footer-social-vk"></a>
+                    <a href="#" class="footer-social-fb"></a>
+                    <a href="#" class="footer-social-ok"></a>
+                </div>
+
+            </div>
+        </footer>
+
+    </body>
+</html>
