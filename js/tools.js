@@ -311,27 +311,80 @@
             e.preventDefault();
         });
 
+        $('.slider-content video').each(function() {
+            var curVideo = $(this);
+            curVideo[0].addEventListener('timeupdate', function() {
+                var progress = Math.floor(curVideo[0].currentTime) / Math.floor(curVideo[0].duration);
+                var curIndex = $('.slider-content video').index(curVideo);
+                var curProgress = $('.slider-preview ul li').eq(curIndex).find('span');
+                curProgress.css({'width': Math.floor(progress * curProgress.parent().width())});
+            }, false);
+        });
+
         $('.slider-preview ul li a').click(function(e) {
             var curLink = $(this);
             var curLi = curLink.parent();
 
+            var curIndex = $('.slider-preview ul li').index(curLi);
+            var curVideo = $('.slider-content li').eq(curIndex).find('video');
+
             if (curLi.hasClass('active')) {
                 if (curLi.hasClass('play')) {
                     curLi.removeClass('play');
+                    curVideo[0].pause();
                 } else {
                     curLi.addClass('play');
+                    $('.slider-content li').eq(curIndex).find('.slider-bg').hide();
+                    curVideo.show();
+                    curVideo[0].play();
                 }
             } else {
                 $('.slider-preview ul li.active').removeClass('active play');
                 curLi.addClass('active play');
 
-                var curIndex = $('.slider-preview ul li').index(curLi);
+                $('.slider-content li.active video')[0].pause();
                 $('.slider-content li.active').removeClass('active');
                 $('.slider-content li').eq(curIndex).addClass('active');
+                $('.slider-content li').eq(curIndex).find('.slider-bg').hide();
+
+                curVideo.show();
+                curVideo[0].play();
             }
 
             e.preventDefault();
         });
+
+        $('.choose-map-rooms-item-1').hover(
+            function() {
+                $('.choose-map-section-number-flats-1').show();
+            },
+
+            function() {
+                $('.choose-map-section-number-flats-1').hide();
+            }
+        );
+
+        $('.choose-map-rooms-item-2').hover(
+            function() {
+                $('.choose-map-section-number-flats-2').show();
+            },
+
+            function() {
+                $('.choose-map-section-number-flats-2').hide();
+            }
+        );
+
+        $('.choose-map-rooms-item-3').hover(
+            function() {
+                $('.choose-map-section-number-flats-3').show();
+            },
+
+            function() {
+                $('.choose-map-section-number-flats-3').hide();
+            }
+        );
+
+        $('.choose-map').maphilight({fillOpacity: 0.5, stroke: false, fillColor: 'f8ad14'});
 
     });
 

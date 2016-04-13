@@ -356,13 +356,14 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .gallery-preview a:hover {padding:1px; border:4px solid #548fff}
 .gallery-preview li.active a {padding:1px; border:4px solid #ef3e23}
 
-.slider {position:relative; padding:62.96% 0 0 0}
+.slider {position:relative; padding:56.25% 0 0 0}
 .slider-content {position:absolute; left:0; top:0; width:100%; height:100%}
 .slider-content ul {margin:0; padding:0; list-style:none; position:absolute; left:0; top:0; width:100%; height:100%}
 .slider-content ul li {margin:0; padding:0; position:absolute; left:-9999px; top:-9999px; width:100%; height:100%; background:#000}
 .slider-content ul li:before {display:none}
 .slider-content ul li.active {z-index:2; left:0; top:0}
 .slider-bg {position:absolute; left:0; top:0; width:100%; height:100%; background:no-repeat center; background-size:cover; opacity:.4}
+.slider-content video {display:none; position:absolute; left:0; top:0; width:100%; height:100%; margin:0; padding:0; opacity:.4}
 .slider-ctrl {position:absolute; left:50%; top:50px; width:780px; margin-left:-390px; color:#fff; z-index:3}
 .slider-preview {float:left; padding:9px 0 0 0}
 .slider-preview ul {margin:0; padding:0; list-style:none}
@@ -376,7 +377,7 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .slider-preview ul li a span {display:block; position:absolute; left:0; bottom:0; width:0; height:4px; background:#ef3e23}
 .webcam-main {float:right; width:60px; height:60px; background:#ef3e23 url(../images/webcam-main.png) no-repeat center; border-radius:30px}
 .webcam-main:hover {background-color:#121e35}
-.slider-inner {position:absolute; left:50%; top:182px; width:780px; margin-left:-390px; color:#fff; z-index:3}
+.slider-inner {position:absolute; left:50%; top:152px; width:780px; margin-left:-390px; color:#fff; z-index:3}
 .slider-title {font-weight:bold; font-size:60px; line-height:60px}
 .slider-text {font-weight:300; font-size:20px; line-height:25px; padding:31px 0 0 0}
 
@@ -411,3 +412,63 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .hot-title {font-size:24px; line-height:25px; padding:36px 20px 0 20px}
 .hot-date {font-size:16px; line-height:25px; color:#2a4475; padding:23px 20px 0 20px}
 .hot-anonce {font-size:16px; line-height:25px; padding:28px 20px 0 20px}
+
+.choose {display:table; width:100%; margin:0 0 -60px 0}
+
+.choose-form {display:table-cell; width:200px; padding:0 30px; background:#2a4475; vertical-align:top}
+.choose-form form {margin:0; padding:136px 0 40px 0; width:200px}
+.choose-form .form-label {color:#fff; margin:19px 0 12px 0}
+.choose-form-submit {padding:32px 0 0 0}
+.choose-form-submit input {vertical-align:top; width:100%; height:50px; margin:0; padding:0; outline:none; text-align:center; border:1px solid #95a2ba; background:transparent; border-radius:3px; -webkit-appearance:none; cursor:pointer; color:#fff; text-transform:uppercase; font:bold 12px/50px "Open Sans", sans-serif}
+.choose-form-submit input:hover {border-color:#fff}
+.choose-form-reset {padding:20px 0 0 0}
+.choose-form-reset input {vertical-align:top; width:100%; height:50px; margin:0; padding:0; outline:none; text-align:center; border:1px solid #111d33; background:transparent; border-radius:3px; -webkit-appearance:none; cursor:pointer; color:#121e35; text-transform:uppercase; font:bold 12px/50px "Open Sans", sans-serif}
+.choose-form-reset input:hover {border-color:#548fff; color:#548fff}
+
+.choose-container {display:table-cell; vertical-align:top}
+
+.choose-content {max-width:1065px; height:720px; position:relative; background:url(../images/map.jpg) no-repeat left top}
+
+.choose-map-title {position:absolute; left:48px; top:39px; color:#fff; font-size:14px; line-height:16px; font-style:italic; text-shadow:0 1px 2px rgba(18, 30, 53, .73); padding:0 43px 18px 0; background:url(../images/choose-map-title.png) no-repeat right bottom}
+
+.choose-map-section-number {position:absolute; width:40px; height:40px; background:#fff; text-align:center; color:#121e35; font-weight:bold; font-size:20px; line-height:40px; border-radius:20px}
+.choose-map-section-number:after {content:""; display:block; width:2px; height:10px; background:#fff; position:absolute; left:50%; bottom:-10px; margin-left:-1px}
+.choose-map-section-number:before {content:""; display:block; width:55px; height:15px; position:absolute; left:18px; top:34px; background:url(../images/choose-map-section-number.png)}
+.choose-map-section-number.disabled {color:#dedfe1}
+.choose-map-section-number-flats {display:none; position:absolute; right:-15px; top:-15px; width:30px; height:30px; border-radius:15px; color:#fff; text-align:center; font-size:15px; line-height:30px; font-weight:normal}
+.choose-map-section-number-flats-1 {background:#253fa2}
+.choose-map-section-number-flats-2 {background:#629e2a}
+.choose-map-section-number-flats-3 {background:#c3a256}
+
+.choose-map {position:absolute; left:0; top:0}
+
+.choose-map-rooms {position:absolute; left:0; bottom:27px; width:100%; padding:0 50px; box-sizing:border-box}
+.choose-map-rooms-item {float:left; width:33.33%; padding:0 10px; box-sizing:border-box}
+.choose-map-rooms-item a {display:table; width:100%; border-radius:3px}
+.choose-map-rooms-text {display:table-cell; vertical-align:middle; padding:0 0 0 20px; background:#fff; height:70px; border-radius:2px 0 0 2px; position:relative}
+.choose-map-rooms-item a:hover .choose-map-rooms-text:after {content:""; display:block; position:absolute; left:50%; top:-9px; width:0; height:0; border-bottom:9px solid #fff; border-left:9px solid transparent; border-right:9px solid transparent}
+.choose-map-rooms-title {font-size:20px; color:#121e35}
+.choose-map-rooms-price {font-size:15px; color:#ef3e23; font-weight:bold; padding:2px 0 0 0}
+.choose-map-rooms-count {display:table-cell; vertical-align:middle; color:#fff; font-size:20px; width:60px; text-align:center; height:70px; border-radius:0 2px 2px 0}
+.choose-map-rooms-item-1 .choose-map-rooms-count {background:#253fa2}
+.choose-map-rooms-item-2 .choose-map-rooms-count {background:#629e2a}
+.choose-map-rooms-item-3 .choose-map-rooms-count {background:#c3a256}
+
+.choose-results {padding:14px 60px 65px 60px; max-width:945px}
+.choose-results h3 {text-align:center; margin-bottom:37px}
+.choose-results table {width:100%}
+.choose-results th {white-space:nowrap}
+.choose-results td.price,
+.choose-results td.campaign-links {white-space:nowrap}
+.choose-results td.order {width:1%; white-space:nowrap; padding:0}
+
+.campaign-link {display:inline-block; vertical-align:middle; margin:0 3px; width:19px; height:20px; position:relative; background:url(../images/campaign-link.png)}
+.campaign-link-discount {background-position:left top}
+.campaign-link-discount:hover {background-position:left -20px}
+.campaign-link-construction {background-position:-19px top}
+.campaign-link-construction:hover {background-position:-19px -20px}
+.campaign-link-gift {background-position:-38px top}
+.campaign-link-gift:hover {background-position:-38px -20px}
+.campaign-link span {display:none; position:absolute; left:-20px; top:31px; white-space:nowrap; color:#fff; height:39px; line-height:39px; padding:0 20px; background:#ef3e23; border-radius:3px}
+.campaign-link span:after {content:""; display:block; width:0; height:0; border-bottom:6px solid #ef3e23; border-left:6px solid transparent; border-right:6px solid transparent; position:absolute; top:-6px; left:17px}
+.campaign-link:hover span {display:block}
