@@ -8,7 +8,7 @@
             e.preventDefault();
         });
 
-        $('.order-link').click(function(e) {
+        $('body').on('click', '.order-link', function(e) {
             $.ajax({
                 type: 'POST',
                 url: $(this).attr('href'),
@@ -384,7 +384,55 @@
             }
         );
 
-        $('.choose-map').maphilight({fillOpacity: 0.5, stroke: false, fillColor: 'f8ad14'});
+        $('.choose-form-reset input').click(function() {
+            window.setTimeout(function() {
+                $('.form-select select').trigger('chosen:updated');
+            }, 100);
+        });
+
+        $('.choose-map').maphilight();
+
+        $('.choose-content area').click(function(e) {
+            var curArea = $(this);
+            $('.choose-content area').data('maphilight', {"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5});
+            curArea.data('maphilight', {"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5, "alwaysOn":true});
+            $('.choose-map').maphilight();
+
+            $('.choose-window').addClass('open');
+
+            var curIndex = $('.choose-content area').index(curArea);
+            $('.choose-window-sections li.active').removeClass('active');
+            $('.choose-window-sections li').eq(curIndex).addClass('active');
+
+            $('.choose-window-container').append('<div class="loading"><div class="loading-text">Загрузка данных</div></div>');
+            $.ajax({
+                type: 'POST',
+                url: curArea.attr('href'),
+                dataType: 'html',
+                cache: false
+            }).done(function(html) {
+                $('.choose-window-container').find('.loading').remove();
+                $('.choose-window-content').html(html);
+            });
+
+            e.preventDefault();
+        });
+
+        $('.choose-window-sections li a').click(function(e) {
+            var curLi = $(this).parent();
+            if (!curLi.hasClass('disabled')) {
+                var curIndex = $('.choose-window-sections li').index(curLi);
+                $('.choose-content area').eq(curIndex).click();
+            }
+            e.preventDefault();
+        });
+
+        $('.choose-window-close').click(function(e) {
+            $('.choose-content area').data('maphilight', {"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5});
+            $('.choose-map').maphilight();
+            $('.choose-window').removeClass('open');
+            e.preventDefault();
+        });
 
     });
 
