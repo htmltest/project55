@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <title>ЖК «Союзный»</title>
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700,700italic,800&amp;subset=latin,cyrillic" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:300,400,400italic,700,700italic,800&amp;subset=latin,cyrillic" />
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/cocoen/cocoen.min.css" />
         <link rel="stylesheet" href="js/chosen/chosen.css" />
@@ -36,7 +36,7 @@
                             <ul>
                                 <li><a href="#"><span>О жилом комплексе «Союзный»</span></a></li>
                                 <li><a href="#"><span>Расположение и&nbsp;инфраструктура</span></a></li>
-                                <li class="active"><a href="#"><span>Выбор квартиры по&nbsp;параметрам</span></a></li>
+                                <li><a href="#"><span>Выбор квартиры по&nbsp;параметрам</span></a></li>
                                 <li><a href="#"><span>Акции и&nbsp;спецпредложения</span></a></li>
                                 <li><a href="#"><span>Фотогалерея</span></a></li>
                                 <li><a href="#"><span>О застройщике</span></a></li>
@@ -224,6 +224,16 @@
                     <h2>Форма</h2>
 
                     <form action="windows/success.html" method="post" class="ajaxForm">
+                        <div class="form-success">
+                            <div class="form-success-title">Успех!</div>
+                            <div class="form-success-text">Описание ошибки. Может быть достаточно длинным-предлинным</div>
+                        </div>
+
+                        <div class="form-error">
+                            <div class="form-error-title">Ошибка!</div>
+                            <div class="form-error-text">Описание ошибки. Может быть достаточно длинным-предлинным</div>
+                        </div>
+
                         <div class="form-label">Имя <span>*</span></div>
                         <div class="form-input"><input type="text" name="name" value="" class="required" /></div>
 
@@ -273,7 +283,7 @@
                         <div class="form-label">Подписка на новости</div>
                         <div class="form-field">
                             <div class="form-checkbox"><span><input type="checkbox" name="checkbox1" checked="checked" /></span>хочу</div>
-                            <div class="form-checkbox"><span><input type="checkbox" name="checkbox2" /></span>хочу два раза</div>
+                            <div class="form-checkbox"><span><input type="checkbox" name="checkbox2" class="required" /></span>хочу два раза</div>
                         </div>
 
                         <div class="form-label">Соглашение о неразглашении</div>

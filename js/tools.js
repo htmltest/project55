@@ -5,6 +5,7 @@
         $('.side-link').click(function(e) {
             $('body').toggleClass('hidden-menu');
             myMap.container.fitToViewport();
+            resizeVideo();
             e.preventDefault();
         });
 
@@ -77,6 +78,19 @@
         $('form').each(function() {
             if ($(this).hasClass('ajaxForm')) {
                 $(this).validate({
+                    ignore: '',
+                    invalidHandler: function(form, validatorcalc) {
+                        validatorcalc.showErrors();
+
+                        $('.form-checkbox').each(function() {
+                            var curField = $(this);
+                            if (curField.find('input.error').length > 0) {
+                                curField.addClass('error');
+                            } else {
+                                curField.removeClass('error');
+                            }
+                        });
+                    },
                     submitHandler: function(form) {
                         $(form).append('<div class="loading"><div class="loading-text">Отправка данных</div></div>');
                         $.ajax({
@@ -92,7 +106,21 @@
                     }
                 });
             } else {
-                $(this).validate();
+                $(this).validate({
+                    ignore: '',
+                    invalidHandler: function(form, validatorcalc) {
+                        validatorcalc.showErrors();
+
+                        $('.form-checkbox').each(function() {
+                            var curField = $(this);
+                            if (curField.find('input.error').length > 0) {
+                                curField.addClass('error');
+                            } else {
+                                curField.removeClass('error');
+                            }
+                        });
+                    }
+                });
             }
         });
 
@@ -105,6 +133,10 @@
                 var curIndex = $('.plans-rooms li').index(curLi);
                 $('.plans-rooms-tab.active').removeClass('active');
                 $('.plans-rooms-tab').eq(curIndex).addClass('active');
+
+                var curLink = $('.plans-rooms-tab').eq(curIndex).find('.plans-types li.active a');
+                $('.cocoen').replaceWith('<div class="cocoen"><img src="' + curLink.data('comparebefore') + '" alt="" /><img src="' + curLink.data('compareafter') + '" alt="" /></div>');
+                $('.cocoen').cocoen();
             }
             e.preventDefault();
         });
@@ -120,6 +152,9 @@
                 var curIndex = curBlock.find('.plans-types li').index(curLi);
                 curBlock.find('.plans-types-tab.active').removeClass('active');
                 curBlock.find('.plans-types-tab').eq(curIndex).addClass('active');
+
+                $('.cocoen').replaceWith('<div class="cocoen"><img src="' + $(this).data('comparebefore') + '" alt="" /><img src="' + $(this).data('compareafter') + '" alt="" /></div>');
+                $('.cocoen').cocoen();
             }
             e.preventDefault();
         });
@@ -311,6 +346,8 @@
             e.preventDefault();
         });
 
+        resizeVideo();
+
         $('.slider-content video').each(function() {
             var curVideo = $(this);
             curVideo[0].addEventListener('timeupdate', function() {
@@ -319,6 +356,12 @@
                 var curProgress = $('.slider-preview ul li').eq(curIndex).find('span');
                 curProgress.css({'width': Math.floor(progress * curProgress.parent().width())});
             }, false);
+        });
+
+        $('.slider-content video:first').each(function() {
+            $(this)[0].addEventListener('canplay', function() {
+                $('.slider-preview ul li:first a').click();
+            });
         });
 
         $('.slider-preview ul li a').click(function(e) {
@@ -490,6 +533,19 @@
         $('.window input.maskPhone').mask('+7 (999) 999-99-99');
 
         $('.window form').validate({
+            ignore: '',
+            invalidHandler: function(form, validatorcalc) {
+                validatorcalc.showErrors();
+
+                $('.form-checkbox').each(function() {
+                    var curField = $(this);
+                    if (curField.find('input.error').length > 0) {
+                        curField.addClass('error');
+                    } else {
+                        curField.removeClass('error');
+                    }
+                });
+            },
             submitHandler: function(form) {
                 $(form).append('<div class="loading"><div class="loading-text">Отправка данных</div></div>');
                 $.ajax({
@@ -565,8 +621,29 @@
 
     $(window).bind('load resize', function() {
         $('.page-404-container').each(function() {
-            $(this).css({'height': $(window).height() - 40 - $('footer').height()})
+            $(this).css({'height': $(window).height() - 40 - $('footer').height() + 1})
         });
+
+        resizeVideo();
+
     });
+
+    function resizeVideo() {
+        $('.slider').each(function() {
+            var maxHeight = $(window).height() * .75;
+            if (maxHeight < 680) {
+                maxHeight = 680;
+            }
+            $('.slider').css({'padding-top': maxHeight + 'px'});
+
+            var curWidth = $('.slider').width();
+            var curHeight = curWidth * .5625;
+            if (curHeight < maxHeight) {
+                curHeight = maxHeight;
+                curWidth = curHeight / .5625;
+            }
+            $('.slider video').css({'width': curWidth, 'height': curHeight, 'left': '50%', 'top': '50%', 'margin-left': -curWidth / 2, 'margin-top': -curHeight / 2});
+        });
+    }
 
 })(jQuery);
