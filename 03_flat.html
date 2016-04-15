@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>ЖК «Союзный»</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:300,400,400italic,700,700italic,800&amp;subset=latin,cyrillic" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/cocoen/cocoen.min.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
+
+        <script src="js/jquery-2.2.2.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/cocoen/cocoen.min.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/jquery.maphilight.min.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=1280" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <!-- side -->
+            <div class="side">
+
+                <div class="side-container">
+                    <div class="side-content">
+                        <div class="logo"><a href="#"><img src="images/logo.png" alt="" width="102" height="59" /></a></div>
+
+                        <nav>
+                            <ul>
+                                <li><a href="#"><span>О жилом комплексе «Союзный»</span></a></li>
+                                <li><a href="#"><span>Расположение и&nbsp;инфраструктура</span></a></li>
+                                <li class="active"><a href="#"><span>Выбор квартиры по&nbsp;параметрам</span><div class="menu-filter-icon"></div></a></li>
+                                <li><a href="#"><span>Акции и&nbsp;спецпредложения</span></a></li>
+                                <li><a href="#"><span>Фотогалерея</span></a></li>
+                                <li><a href="#"><span>О застройщике</span></a></li>
+                                <li><a href="#"><span>Контакты</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <a href="#" class="side-link"></a>
+
+                <a href="#" class="callback-link"></a>
+
+                <div class="callback">
+                    <h2>Обратный звонок</h2>
+                    <form action="windows/success.html" method="post" class="ajaxForm">
+                        <div class="form-label">Телефон <span>*</span></div>
+                        <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" /></div>
+
+                        <div class="form-label">Имя</div>
+                        <div class="form-input"><input type="text" name="name" value="" /></div>
+
+                        <div class="form-required"><span>*</span> – поля, обязательные к заполнению</div>
+
+                        <div class="form-submit"><input type="submit" value="Отправить" /></div>
+                    </form>
+
+                    <a href="#" class="callback-close"></a>
+                </div>
+
+            </div>
+            <!-- side END -->
+
+            <!-- wrapper inner -->
+            <div class="wrapper-inner">
+
+                <!-- flat header -->
+                <div class="flat-header">
+                    <div class="flat-header-inner">
+                        <div class="flat-header-item">
+                            <div class="flat-header-item-title">Кол-во комнат</div>
+                            <div class="flat-header-item-value">любое</div>
+                        </div>
+                        <div class="flat-header-item">
+                            <div class="flat-header-item-title">Секция</div>
+                            <div class="flat-header-item-value">2</div>
+                        </div>
+                        <div class="flat-header-item">
+                            <div class="flat-header-item-title">Этаж</div>
+                            <div class="flat-header-item-value">24</div>
+                        </div>
+                        <div class="flat-header-item">
+                            <div class="flat-header-item-title">Площадь, М&sup2;</div>
+                            <div class="flat-header-item-value">от 40 до 50</div>
+                        </div>
+                        <div class="flat-header-item">
+                            <div class="flat-header-item-title">Стоимость</div>
+                            <div class="flat-header-item-value">от 4,5 до 5 млн</div>
+                        </div>
+                        <a href="#" class="flat-header-back"><img src="images/flat-header-back.png" alt="" width="22" height="17" /> Вернуться к списку</a>
+                    </div>
+                </div>
+                <!-- flat header END -->
+
+                <!-- flat plan -->
+                <div class="flat-plan">
+                    <div class="flat-plan-container">
+
+                        <h1>Квартира 1-комнатная / <span>35,9 м&sup2;</span></h1>
+
+                        <!-- flat info -->
+                        <div class="flat-info">
+                            <div class="flat-info-inner">
+                                <dl>
+                                    <dt>Число комнат</dt>
+                                    <dd>1</dd>
+
+                                    <dt>Площадь, м&sup2;</dt>
+                                    <dd>35.9</dd>
+
+                                    <dt>Секция</dt>
+                                    <dd>2</dd>
+
+                                    <dt>Этаж</dt>
+                                    <dd>12</dd>
+
+                                    <dt>Вид из окон</dt>
+                                    <dd>улица</dd>
+
+                                    <dt>Лоджия</dt>
+                                    <dd>1</dd>
+
+                                    <dt>Номер на площадке</dt>
+                                    <dd>5,5</dd>
+
+                                    <dt>Сан. узлы</dt>
+                                    <dd>1</dd>
+
+                                    <dt>Цена, руб.</dt>
+                                    <dd class="price">3 630 944</dd>
+                                </dl>
+
+                                <a href="windows/order.html" class="order-link order-link-flat">Заявка на просмотр</a>
+                                <a href="windows/order-email.html" class="order-link">Отправить на почту в виде PDF</a>
+                                <a href="#" class="detail-link">Распечатать pdf</a>
+                                <div class="flat-likes">
+                                    <span id="ya_share_counter"></span>
+                                    <script src="http://yandex.st/share/share.js"></script>
+                                    <script>
+                                        var yaShareCounter = new Ya.share({
+                                            'element': 'ya_share_counter',
+                                            'theme': 'counter',
+                                            'elementStyle': {'quickServices': ['vkontakte', 'facebook', 'twitter'], 'type': 'small'}
+                                         });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- flat info END -->
+
+                        <div class="plans-compare">
+                            <div class="cocoen">
+                                <img src="files/compare-before.png" alt="" />
+                                <img src="files/compare-after.png" alt="" />
+                            </div>
+                            <div class="plans-compare-text">Перемещайте курсор влево-вправо и увидите разницу между планировкой и готовым вариантом</div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- flat plan END -->
+
+                <!-- flat schemes -->
+                <div class="flat-schemes">
+
+                    <!-- flat floor -->
+                    <div class="flat-floor">
+                        <h3>Квартира на этаже</h3>
+
+                        <div class="flat-floor-container">
+                            <div class="flat-floor-content">
+                                <div class="flat-floor-map">
+                                    <img src="images/blank.gif" alt="" class="flat-floor-img" usemap="#flat-floor-map" />
+                                    <map name="flat-floor-map">
+                                        <area shape="poly" coords="4,1,224,2,228,2,247,3,247,59,248,62,143,63,142,89,4,91" href="#" alt="" data-maphilight='{"stroke":false, "fillColor":"b7b7b7", "fillOpacity":1, "alwaysOn":true}' />
+                                        <area shape="poly" coords="108,156,108,286,46,288,23,264,24,212,10,212,2,204,2,157" href="#" alt="" data-maphilight='{"stroke":false, "fillColor":"48c552", "fillOpacity":1, "alwaysOn":true}' />
+                                        <area shape="poly" coords="109,157,200,157,200,309,166,310,157,302,158,288,109,288" href="#" alt="" data-maphilight='{"stroke":false, "fillColor":"f8ad14", "fillOpacity":1, "alwaysOn":true}' />
+                                        <area shape="poly" coords="291,88,291,290,243,291,243,301,235,310,200,311,200,156,244,155,244,87" href="#" alt="" data-maphilight='{"stroke":false, "fillColor":"48c552", "fillOpacity":1, "alwaysOn":true}' />
+                                    </map>
+                                </div>
+                                <img src="files/flat-floor.png" alt="" width="300" height="312" class="flat-floor-scheme" usemap="#flat-floor-scheme" />
+                                <map name="flat-floor-scheme">
+                                    <area class="disabled" shape="poly" coords="4,1,224,2,228,2,247,3,247,59,248,62,143,63,142,89,4,91" href="#" alt="" />
+                                    <area shape="poly" coords="108,156,108,286,46,288,23,264,24,212,10,212,2,204,2,157" href="#" alt="" />
+                                    <area shape="poly" coords="109,157,200,157,200,309,166,310,157,302,158,288,109,288" href="#" alt="" />
+                                    <area shape="poly" coords="291,88,291,290,243,291,243,301,235,310,200,311,200,156,244,155,244,87" href="#" alt="" />
+                                </map>
+                                <div class="flat-floor-scheme-hint">
+                                    <div class="flat-floor-scheme-hint-item">Купленная 1-комнатная квартира / <span>56.8 м&sup2;</span></div>
+                                    <div class="flat-floor-scheme-hint-item">Свободная 1-комнатная квартира / <span>16.8 м&sup2;</span></div>
+                                    <div class="flat-floor-scheme-hint-item">Выбранная 1-комнатная квартира / <span>36.8 м&sup2;</span></div>
+                                    <div class="flat-floor-scheme-hint-item">Свободная 1-комнатная квартира / <span>36.8 м&sup2;</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flat-floor-legend">
+                            <div class="flat-floor-legend-item">
+                                <div class="flat-floor-legend-item-flat-selected"></div>
+                                <div class="flat-floor-legend-item-title">Выбранная<br />квартира</div>
+                            </div>
+                            <div class="flat-floor-legend-item">
+                                <div class="flat-floor-legend-item-flat-free"></div>
+                                <div class="flat-floor-legend-item-title">Квартира<br />свободна</div>
+                            </div>
+                            <div class="flat-floor-legend-item">
+                                <div class="flat-floor-legend-item-flat-sold"></div>
+                                <div class="flat-floor-legend-item-title">Квартира<br />куплена</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- flat floor END -->
+
+                    <!-- flat builds -->
+                    <div class="flat-builds">
+                        <div class="flat-builds-content">
+                            <img src="images/blank.gif" width="540" height="540" alt="" class="flat-map" usemap="#map" />
+                            <map name="map">
+                                <!--<area shape="poly" coords="141,196,201,212,200,215,209,218,218,376,219,376,220,386,198,418,178,413,163,434,156,432,155,435,142,431,141,421,138,416,137,412,134,408,110,227,132,200,136,201" href="#" alt="" data-maphilight='{"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5, "alwaysOn":true}' />-->
+                                <area shape="poly" coords="83,163,131,177,134,197,111,227,133,407,129,407,130,416,129,418,82,401,44,198,59,182,62,185" href="#" alt="" data-maphilight='{"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5, "alwaysOn":true}' />
+                                <!--<area shape="poly" coords="123,124,163,135,170,204,140,196,136,197,132,177,126,175,83,163,83,154,116,120,118,127" href="#" alt="" data-maphilight='{"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5, "alwaysOn":true}' />-->
+                                <!--<area shape="poly" coords="163,134,124,123,132,114,136,114,141,111,141,105,144,103,144,100,155,88,158,87,183,91,182,97,217,107,193,132,198,211,171,203" href="#" alt="" data-maphilight='{"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5, "alwaysOn":true}' />-->
+                                <!--<area shape="poly" coords="195,133,198,211,200,212,200,215,208,218,216,326,257,338,259,335,266,337,262,149,285,124,265,118,265,117,253,113,253,111,241,107,240,103,229,100,222,107,218,107" href="#" alt="" data-maphilight='{"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5, "alwaysOn":true}' />-->
+                                <!--<area shape="poly" coords="285,126,297,130,304,121,315,124,315,129,329,132,329,134,342,138,342,140,362,147,362,149,341,177,333,360,328,360,327,362,273,346,273,343,266,340,263,150,266,148" href="#" alt="" data-maphilight='{"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5, "alwaysOn":true}' />-->
+                                <!--<area shape="poly" coords="341,177,359,153,375,156,382,146,393,149,393,154,408,158,408,160,422,163,421,166,444,173,427,199,406,391,400,390,395,391,342,375,340,371,334,368" href="#" alt="" data-maphilight='{"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5, "alwaysOn":true}' />-->
+                                <!--<area shape="poly" coords="444,174,429,198,427,200,425,212,406,390,410,385,425,389,424,400,481,417,497,382,532,195,508,188,509,185,497,181,497,180,480,175,481,171,468,168,461,178" href="#" alt="" data-maphilight='{"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5, "alwaysOn":true}' />-->
+                            </map>
+                            <h3>Секция на общей схеме</h3>
+                            <div class="flat-map-section-number" style="left:126px; top:185px">1</div>
+                            <div class="flat-map-section-number active" style="left:61px; top:165px">2</div>
+                            <div class="flat-map-section-number" style="left:100px; top:114px">3</div>
+                            <div class="flat-map-section-number" style="left:145px; top:77px">4</div>
+                            <div class="flat-map-section-number" style="left:206px; top:96px">5</div>
+                            <div class="flat-map-section-number disabled" style="left:288px; top:119px">6</div>
+                            <div class="flat-map-section-number disabled" style="left:370px; top:145px">7</div>
+                            <div class="flat-map-section-number disabled" style="left:460px; top:169px">8</div>
+                        </div>
+                    </div>
+                    <!-- flat builds END -->
+                </div>
+                <!-- flat schemes END -->
+
+                <!-- content -->
+                <div class="content">
+
+                    <!-- other flats END -->
+                    <div class="other-flats">
+                        <h3>Похожие квартиры</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="active"><a href="#">Комн.</a></th>
+                                    <th><a href="#">Секция</a></th>
+                                    <th><a href="#">Этаж</a></th>
+                                    <th><a href="#">Пл., м&sup2;</a></th>
+                                    <th>Акции</th>
+                                    <th><a href="#">Цена, руб.</a></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="active" style="text-align:center">1</td>
+                                    <td style="text-align:center">1</td>
+                                    <td style="text-align:center">12</td>
+                                    <td style="text-align:center">63,7</td>
+                                    <td class="campaign-links" style="text-align:center">
+                                        <a href="#" class="campaign-link campaign-link-discount"><span>Скидка</span></a>
+                                        <a href="#" class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></a>
+                                        <a href="#" class="campaign-link campaign-link-gift"><span>Подарок</span></a>
+                                    </td>
+                                    <td class="price" style="text-align:center">5 855 847</td>
+                                    <td class="order" style="text-align:center"><a href="windows/order-with-error.html" class="order-link">Заявка на просмотр</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="active" style="text-align:center">2</td>
+                                    <td style="text-align:center">1</td>
+                                    <td style="text-align:center">11</td>
+                                    <td style="text-align:center">63,7</td>
+                                    <td class="campaign-links" style="text-align:center">
+                                        <a href="#" class="campaign-link campaign-link-discount"><span>Скидка</span></a>
+                                        <a href="#" class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></a>
+                                    </td>
+                                    <td class="price" style="text-align:center">5 855 847</td>
+                                    <td class="order" style="text-align:center"><a href="windows/order-email.html" class="order-link">Заявка на просмотр</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="active" style="text-align:center">3</td>
+                                    <td style="text-align:center">3</td>
+                                    <td style="text-align:center">5</td>
+                                    <td style="text-align:center">63,7</td>
+                                    <td class="campaign-links" style="text-align:center">
+                                        <a href="#" class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></a>
+                                    </td>
+                                    <td class="price" style="text-align:center">5 855 847</td>
+                                    <td class="order" style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="active" style="text-align:center">1</td>
+                                    <td style="text-align:center">3</td>
+                                    <td style="text-align:center">7</td>
+                                    <td style="text-align:center">63,7</td>
+                                    <td class="campaign-links" style="text-align:center">
+                                        <a href="#" class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></a>
+                                    </td>
+                                    <td class="price" style="text-align:center">5 855 847</td>
+                                    <td class="order" style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="active" style="text-align:center">2</td>
+                                    <td style="text-align:center">4</td>
+                                    <td style="text-align:center">8</td>
+                                    <td style="text-align:center">70,0</td>
+                                    <td class="campaign-links" style="text-align:center">
+                                        <a href="#" class="campaign-link campaign-link-gift"><span>Подарок</span></a>
+                                    </td>
+                                    <td class="price" style="text-align:center">6 017 913</td>
+                                    <td class="order" style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="active" style="text-align:center">1</td>
+                                    <td style="text-align:center">3</td>
+                                    <td style="text-align:center">25</td>
+                                    <td style="text-align:center">70,0</td>
+                                    <td class="campaign-links" style="text-align:center">
+                                        <a href="#" class="campaign-link campaign-link-discount"><span>Скидка</span></a>
+                                        <a href="#" class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></a>
+                                        <a href="#" class="campaign-link campaign-link-gift"><span>Подарок</span></a>
+                                    </td>
+                                    <td class="price" style="text-align:center">5 958 330</td>
+                                    <td class="order" style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="active" style="text-align:center">1</td>
+                                    <td style="text-align:center">2</td>
+                                    <td style="text-align:center">11</td>
+                                    <td style="text-align:center">70,0</td>
+                                    <td class="campaign-links" style="text-align:center">
+                                        <a href="#" class="campaign-link campaign-link-discount"><span>Скидка</span></a>
+                                    </td>
+                                    <td class="price" style="text-align:center">5 958 330</td>
+                                    <td class="order" style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="active" style="text-align:center">1</td>
+                                    <td style="text-align:center">2</td>
+                                    <td style="text-align:center">23</td>
+                                    <td style="text-align:center">70,0</td>
+                                    <td class="campaign-links" style="text-align:center">
+                                        <a href="#" class="campaign-link campaign-link-discount"><span>Скидка</span></a>
+                                    </td>
+                                    <td class="price" style="text-align:center">6 017 913</td>
+                                    <td class="order" style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="active" style="text-align:center">1</td>
+                                    <td style="text-align:center">2</td>
+                                    <td style="text-align:center">12</td>
+                                    <td style="text-align:center">70,0</td>
+                                    <td class="campaign-links" style="text-align:center">
+                                        <a href="#" class="campaign-link campaign-link-discount"><span>Скидка</span></a>
+                                    </td>
+                                    <td class="price" style="text-align:center">6 017 913</td>
+                                    <td class="order" style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="active" style="text-align:center">1</td>
+                                    <td style="text-align:center">1</td>
+                                    <td style="text-align:center">10</td>
+                                    <td style="text-align:center">70,0</td>
+                                    <td class="campaign-links" style="text-align:center">
+                                        <a href="#" class="campaign-link campaign-link-discount"><span>Скидка</span></a>
+                                        <a href="#" class="campaign-link campaign-link-construction"><span>Ремонт в подарок</span></a>
+                                        <a href="#" class="campaign-link campaign-link-gift"><span>Подарок</span></a>
+                                    </td>
+                                    <td class="price" style="text-align:center">5 855 847</td>
+                                    <td class="order" style="text-align:center"><a href="windows/order.html" class="order-link">Заявка на просмотр</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- other flats END -->
+
+                </div>
+                <!-- content END -->
+
+            </div>
+            <!-- wrapper inner END -->
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="footer-inner">
+
+                <ul class="footer-menu">
+                    <li><a href="#">О комплексе</a></li>
+                    <li><a href="#">Новости</a></li>
+                    <li><a href="#">Проектная декларация</a></li>
+                </ul>
+
+                <div class="footer-email"><a href="#">info@dom-souzny.ru</a></div>
+
+                <div class="footer-phone">+7 (495) 135-33-65</div>
+
+                <div class="copyrights">© 2016, ЖК «Союзный». Все права защищены.</div>
+
+                <div class="footer-social">
+                    <a href="#" class="footer-social-vk"></a>
+                    <a href="#" class="footer-social-fb"></a>
+                    <a href="#" class="footer-social-ok"></a>
+                </div>
+
+            </div>
+        </footer>
+
+    </body>
+</html>

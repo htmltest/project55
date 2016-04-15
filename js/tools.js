@@ -4,7 +4,9 @@
 
         $('.side-link').click(function(e) {
             $('body').toggleClass('hidden-menu');
-            myMap.container.fitToViewport();
+            if ($('#map').length > 0) {
+                myMap.container.fitToViewport();
+            }
             resizeVideo();
             e.preventDefault();
         });
@@ -470,11 +472,67 @@
             e.preventDefault();
         });
 
+        $('.choose-window-sections li a').hover(
+            function() {
+                var curLi = $(this).parent();
+                if (!curLi.hasClass('disabled') && !curLi.hasClass('active')) {
+                    var curIndex = $('.choose-window-sections li').index(curLi);
+                    $('.choose-content area').eq(curIndex).data('maphilight', {"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5, "alwaysOn":true});
+                    $('.choose-map').maphilight();
+                }
+            },
+
+            function() {
+                var curLi = $(this).parent();
+                if (!curLi.hasClass('disabled') && !curLi.hasClass('active')) {
+                    var curIndex = $('.choose-window-sections li').index(curLi);
+                    $('.choose-content area').eq(curIndex).data('maphilight', {"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5});
+                    $('.choose-map').maphilight();
+                }
+            }
+        );
+
         $('.choose-window-close').click(function(e) {
             $('.choose-content area').data('maphilight', {"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5});
             $('.choose-map').maphilight();
             $('.choose-window').removeClass('open');
             e.preventDefault();
+        });
+
+        $('body').on('mouseover', '.choose-window-flat', function() {
+            $(this).find('.choose-window-flat-detail').stop().fadeIn();
+        });
+
+        $('body').on('mouseout', '.choose-window-flat', function() {
+            $(this).find('.choose-window-flat-detail').stop().fadeOut();
+        });
+
+        $('.flat-map').maphilight();
+
+        $('.flat-builds-content area').click(function(e) {
+            e.preventDefault();
+        });
+
+        $('.flat-floor-img').maphilight();
+
+        $('.flat-floor-content area.disabled').click(function(e) {
+            e.preventDefault();
+        });
+
+        $('map[name="flat-floor-scheme"] area').hover(
+            function(e) {
+                var curIndex = $('map[name="flat-floor-scheme"] area').index($(this));
+                $('.flat-floor-scheme-hint-item').eq(curIndex).show().css({'left': e.pageX - $(window).scrollLeft(), 'top': e.pageY - $(window).scrollTop()});
+            },
+
+            function() {
+                $('.flat-floor-scheme-hint-item').hide();
+            }
+        );
+
+        $('map[name="flat-floor-scheme"] area').mousemove(function(e) {
+            var curIndex = $('map[name="flat-floor-scheme"] area').index($(this));
+            $('.flat-floor-scheme-hint-item').eq(curIndex).show().css({'left': e.pageX - $(window).scrollLeft(), 'top': e.pageY - $(window).scrollTop()});
         });
 
     });
