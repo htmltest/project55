@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/cocoen/cocoen.min.css" />
         <link rel="stylesheet" href="js/chosen/chosen.css" />
+        <link rel="stylesheet" href="js/jscrollpane/jquery.jscrollpane.css" />
 
         <script src="js/jquery-2.2.2.min.js"></script>
         <script src="js/jquery.validate.min.js"></script>
@@ -15,6 +16,8 @@
         <script src="js/cocoen/cocoen.min.js"></script>
         <script src="js/chosen/chosen.jquery.min.js"></script>
         <script src="js/jquery.maphilight.min.js"></script>
+        <script src="js/jscrollpane/jquery.mousewheel.js"></script>
+        <script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=1280" />
@@ -86,7 +89,7 @@
 
                     <p>Жилой комплекс Союзный представляет из себя 8-секционный 25-этажный жилой дом со встроенно-пристроенной начальной школой. Пять жилых многоэтажных секций образуют П-образное здание. На дворовой территории будут размещены места для отдыха и спортивные площадки. Предусмотрено устройство газонов, цветников, посадка деревьев и кустарников. Планируется открытая автостоянка вместимостью 237 машиномест.</p>
                     <p><img src="files/typography.jpg" alt="" width="100%" /></p>
-                    <h3>Эколокия г.Одинцово</h3>
+                    <h3>Экология г.Одинцово</h3>
                     <p>Расположение ЖК Союзный выделяется отличной экологией благодаря уникальным ландшафтам, обилию лесных массивов и отсутствию заводов. Площадь лесов вокруг Одинцово более 70 тыс. га. В Одинцовском районе благоустроен Мещерский парк и набережная реки Сетунь. Западный район Подмосковья считается наиболее чистым и экологичным местом для жизни.</p>
 
                     <div class="news-back">
@@ -111,41 +114,6 @@
                 <!-- map -->
                 <div class="map">
                     <div id="map"></div>
-                    <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
-                    <script type="text/javascript">
-                        ymaps.ready(init);
-
-                        var myMap;
-
-                        function init () {
-                            myMap = new ymaps.Map('map', {
-                                center: [56.136, 40.390],
-                                zoom: 14
-                            });
-
-                            myMap.controls.add('zoomControl');
-
-                            var myGeocoder = ymaps.geocode('Московская область, г. Одинцово, ул. Маковского, д. 26');
-                            myGeocoder.then(
-                                function (res) {
-                                    var coords = res.geoObjects.get(0).geometry.getCoordinates();
-                                    myPlacemark = new ymaps.Placemark(coords, {}, {
-                                        iconImageHref: 'images/map-icon.png',
-                                        iconImageSize: [71, 73],
-                                        iconImageOffset: [-29, -73]
-                                    });
-                                    myMap.geoObjects.add(myPlacemark);
-                                    myMap.setCenter(coords);
-                                    var position = myMap.getGlobalPixelCenter();
-                                    myMap.setGlobalPixelCenter([ position[0] - 190, position[1] ]);
-                                },
-                                function (err) {
-                                    alert('Ошибка');
-                                }
-                            );
-
-                        }
-                    </script>
 
                     <!-- map container -->
                     <div class="map-container">
@@ -169,10 +137,181 @@
                                     <div class="map-way-foot"><a href="#"></a></div>
                                     <a href="#" class="map-callback">Заказать звонок</a>
                                 </div>
+
+                                <div class="map-ways-content">
+                                    <a href="#" class="map-ways-close">Свернуть</a>
+                                    <div class="map-ways-wrap">
+                                        <div class="map-ways-item-auto">
+                                            <h3>Как добраться из центра</h3>
+                                            <div class="map-ways-item-detail">
+                                                <div class="map-ways-item-detail-inner">
+                                                    <ol>
+                                                        <li>Выезд из центра по Минскому шоссе в сторону области</li>
+                                                        <li>После пересечения МКАДа, примерно через 250-300м за АЗС «Лукойл» указатель разворота. Движение по указателю.</li>
+                                                        <li>После пересечения МКАД, примерно через 250м съезд на дублер Боровского шоссе, движение прямо 1 км.</li>
+                                                        <li>Место назначения с права. В навигаторе для ориентира можно указать адрес <strong>Одинцово, ул. Маковского, д. 26</strong></li>
+                                                        <li>Выезд из центра по Минскому шоссе в сторону области</li>
+                                                        <li>После пересечения МКАДа, примерно через 250-300м за АЗС «Лукойл» указатель разворота. Движение по указателю.</li>
+                                                        <li>После пересечения МКАД, примерно через 250м съезд на дублер Боровского шоссе, движение прямо 1 км.</li>
+                                                        <li>Место назначения с права. В навигаторе для ориентира можно указать адрес <strong>Одинцово, ул. Маковского, д. 26</strong></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="map-ways-item-foot">
+                                            <h3>Как добраться из центра</h3>
+                                            <div class="map-ways-item-detail">
+                                                <div class="map-ways-item-detail-inner">
+                                                    <ol>
+                                                        <li>Выезд из центра по Минскому шоссе в сторону области</li>
+                                                        <li>После пересечения МКАДа, примерно через 250-300м за АЗС «Лукойл» указатель разворота. Движение по указателю.</li>
+                                                        <li>После пересечения МКАД, примерно через 250м съезд на дублер Боровского шоссе, движение прямо 1 км.</li>
+                                                        <li>Место назначения с права. В навигаторе для ориентира можно указать адрес <strong>Одинцово, ул. Маковского, д. 26</strong></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- map container END -->
+
+                    <script src="http://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+                    <script type="text/javascript">
+                        ymaps.ready(init);
+
+                        var myMap;
+
+                        function init () {
+                            myMap = new ymaps.Map('map', {
+                                center: [56.136, 40.390],
+                                zoom: 14,
+                                controls: ['zoomControl']
+                            });
+
+                            myMap.behaviors.disable('scrollZoom');
+
+                            var myGeocoder = ymaps.geocode('Московская область, г. Одинцово, ул. Маковского, д. 26');
+                            myGeocoder.then(
+                                function (res) {
+                                    var coords = res.geoObjects.get(0).geometry.getCoordinates();
+                                    myPlacemark = new ymaps.Placemark(coords, {}, {
+                                        iconLayout: 'default#image',
+                                        iconImageHref: 'images/map-icon.png',
+                                        iconImageSize: [71, 73],
+                                        iconImageOffset: [-29, -73]
+                                    });
+                                    myMap.geoObjects.add(myPlacemark);
+                                    myMap.setCenter(coords);
+                                    var position = myMap.getGlobalPixelCenter();
+                                    myMap.setGlobalPixelCenter([ position[0] - 190, position[1] ]);
+                                },
+                                function (err) {
+                                    alert('Ошибка');
+                                }
+                            );
+                        }
+
+                        var multiRoute;
+
+                        $('.map-way-auto a').click(function(e) {
+                            if ($('.map-way-auto').hasClass('active')) {
+                                $('.map-way-auto').removeClass('active');
+                                $('.map-ways-content').removeClass('open');
+                                if (multiRoute) {
+                                    myMap.geoObjects.remove(multiRoute);
+                                }
+                            } else {
+                                if (multiRoute) {
+                                    myMap.geoObjects.remove(multiRoute);
+                                }
+                                $('.map-way-foot').removeClass('active');
+                                $('.map-way-auto').addClass('active');
+                                $('.map-ways-content').addClass('open');
+                                $('.map-ways-item-auto').addClass('active');
+                                $('.map-ways-item-foot').removeClass('active');
+                                multiRoute = new ymaps.multiRouter.MultiRoute({
+                                    referencePoints: [
+                                        'Москва, Кремлёвская набережная',
+                                        'Московская область, г. Одинцово, ул. Маковского, д. 26'
+                                    ],
+                                    params: {
+                                        results: 1
+                                        }
+                                    }, {
+                                        wayPointVisible: false,
+                                        viaPointVisible: false,
+                                        routeStrokeWidth: 10,
+                                        routeStrokeColor: "#ef3e23",
+                                        routeActiveStrokeWidth: 10,
+                                        routeActiveStrokeColor: "#ef3e23"
+                                    }
+                                );
+                                myMap.geoObjects.add(multiRoute);
+                            }
+                            e.preventDefault();
+                        });
+
+                        $('.map-way-foot a').click(function(e) {
+                            if ($('.map-way-foot').hasClass('active')) {
+                                $('.map-way-foot').removeClass('active');
+                                $('.map-ways-content').removeClass('open');
+                                if (multiRoute) {
+                                    myMap.geoObjects.remove(multiRoute);
+                                }
+                            } else {
+                                if (multiRoute) {
+                                    myMap.geoObjects.remove(multiRoute);
+                                }
+                                $('.map-way-auto').removeClass('active');
+                                $('.map-way-foot').addClass('active');
+                                $('.map-ways-content').addClass('open');
+                                $('.map-ways-item-foot').addClass('active');
+                                $('.map-ways-item-auto').removeClass('active');
+                                multiRoute = new ymaps.multiRouter.MultiRoute({
+                                    referencePoints: [
+                                        'Москва, Кремлёвская набережная',
+                                        'Москва, метро Александровский сад',
+                                        'Москва, метро Фили',
+                                        [55.744736, 37.514398],
+                                        [55.672313, 37.282591],
+                                        'Московская область, г. Одинцово, ул. Маковского, д. 26'
+                                    ],
+                                    params: {
+                                        results: 1,
+                                        routingMode: 'masstransit',
+                                        viaIndexes: [1, 2, 3, 4]
+                                        }
+                                    }, {
+                                        wayPointVisible: false,
+                                        viaPointVisible: false,
+                                        routeStrokeWidth: 10,
+                                        routeStrokeColor: "#ef3e23",
+                                        routeActiveStrokeWidth: 10,
+                                        routeActiveStrokeColor: "#ef3e23"
+                                    }
+                                );
+                                myMap.geoObjects.add(multiRoute);
+                            }
+                            e.preventDefault();
+                        });
+
+                        $('.map-ways-close').click(function(e) {
+                            $('.map-way-auto').removeClass('active');
+                            $('.map-way-foot').removeClass('active');
+                            $('.map-ways-content').removeClass('open');
+                            if (multiRoute) {
+                                myMap.geoObjects.remove(multiRoute);
+                            }
+                            e.preventDefault();
+                        });
+
+                        $('.map-ways-item-detail').jScrollPane();
+
+                    </script>
 
                 </div>
                 <!-- map END -->
