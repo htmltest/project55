@@ -124,8 +124,6 @@
                             controls: []
                         });
 
-                        myMap.behaviors.disable('scrollZoom');
-
                         myMap.controls.add('zoomControl', {
                             position: {
                                 right: 10,
@@ -230,7 +228,7 @@
                                 var coords = res.geoObjects.get(0).geometry.getCoordinates();
                                 myPlacemark = new ymaps.Placemark(coords, {}, {
                                     iconLayout: 'default#image',
-                                    iconImageHref: 'images/map-icon-2.png',
+                                    iconImageHref: 'images/map-icon.png',
                                     iconImageSize: [71, 73],
                                     iconImageOffset: [-29, -73]
                                 });
@@ -246,39 +244,21 @@
 
                         for (var i = 0; i < objectsMap.length - 1; i++) {
 
-                            if (objectsMap[i][1] == 1) {
-                                var myPlacemark = new ymaps.Placemark([objectsMap[i][2], objectsMap[i][3]], {
-                                        balloonImg: 'images/infrastructure-map-0' + objectsMap[i][1] + '.png',
-                                        balloonType: objectsMap[i][1],
-                                        balloonContent: objectsMap[i][0]
-                                    }, {
-                                        balloonLayout: MyBalloonLayout,
-                                        balloonContentLayout: MyBalloonContentLayout,
-                                        balloonPanelMaxMapArea: 0,
-                                        balloonShadow: false,
-                                        iconLayout: 'default#image',
-                                        iconImageHref: 'images/infrastructure-map-0' + objectsMap[i][1] + '.png',
-                                        iconImageSize: [50, 50],
-                                        iconImageOffset: [-25, -25],
-                                        hideIconOnBalloonOpen: false
-                                    });
-                            } else {
-                                var myPlacemark = new ymaps.Placemark([objectsMap[i][2], objectsMap[i][3]], {
-                                        balloonImg: 'images/infrastructure-map-0' + objectsMap[i][1] + '.png',
-                                        balloonType: objectsMap[i][1],
-                                        balloonContent: objectsMap[i][0]
-                                    }, {
-                                        balloonLayout: MyBalloonLayout,
-                                        balloonContentLayout: MyBalloonContentLayout,
-                                        balloonPanelMaxMapArea: 0,
-                                        balloonShadow: false,
-                                        iconLayout: 'default#image',
-                                        iconImageHref: 'images/infrastructure-map-0' + objectsMap[i][1] + '.png',
-                                        iconImageSize: [38, 38],
-                                        iconImageOffset: [-19, -19],
-                                        hideIconOnBalloonOpen: false
-                                    });
-                            }
+                            var myPlacemark = new ymaps.Placemark([objectsMap[i][2], objectsMap[i][3]], {
+                                    balloonImg: 'images/infrastructure-map-0' + objectsMap[i][1] + '.png',
+                                    balloonType: objectsMap[i][1],
+                                    balloonContent: objectsMap[i][0]
+                                }, {
+                                    balloonLayout: MyBalloonLayout,
+                                    balloonContentLayout: MyBalloonContentLayout,
+                                    balloonPanelMaxMapArea: 0,
+                                    balloonShadow: false,
+                                    iconLayout: 'default#image',
+                                    iconImageHref: 'images/infrastructure-map-0' + objectsMap[i][1] + '.png',
+                                    iconImageSize: [38, 38],
+                                    iconImageOffset: [-19, -19],
+                                    hideIconOnBalloonOpen: false
+                                });
                             myPlacemark.options.set({
                                 showHintOnHover: false
                             });
@@ -305,15 +285,15 @@
                     <div class="infrastructure-list-title">Инфраструктура района</div>
                     <div class="infrastructure-list-text">Наведите на точку на карте, чтобы узнать подробности</div>
                     <ul>
-                        <li><img src="images/infrastructure-list-01.png" alt="" width="50" height="50" /><span>Ж/д станция «Одинцово»</span></li>
-                        <li><img src="images/infrastructure-list-02.png" alt="" width="50" height="50" /><span>Детский сад</span></li>
-                        <li><img src="images/infrastructure-list-03.png" alt="" width="50" height="50" /><span>Школа</span></li>
-                        <li><img src="images/infrastructure-list-04.png" alt="" width="50" height="50" /><span>Супермаркет</span></li>
-                        <li><img src="images/infrastructure-list-05.png" alt="" width="50" height="50" /><span>Больница</span></li>
-                        <li><img src="images/infrastructure-list-06.png" alt="" width="50" height="50" /><span>Банк</span></li>
-                        <li><img src="images/infrastructure-list-07.png" alt="" width="50" height="50" /><span>Почта</span></li>
-                        <li><img src="images/infrastructure-list-08.png" alt="" width="50" height="50" /><span>Аптека</span></li>
-                        <li><img src="images/infrastructure-list-09.png" alt="" width="50" height="50" /><span>Кафе</span></li>
+                        <li><img src="images/infrastructure-map-01.png" alt="" width="38" height="38" /><span>Ж/д станция «Одинцово»</span></li>
+                        <li><img src="images/infrastructure-map-02.png" alt="" width="38" height="38" /><span>Детский сад</span></li>
+                        <li><img src="images/infrastructure-map-03.png" alt="" width="38" height="38" /><span>Школа</span></li>
+                        <li><img src="images/infrastructure-map-04.png" alt="" width="38" height="38" /><span>Супермаркет</span></li>
+                        <li><img src="images/infrastructure-map-05.png" alt="" width="38" height="38" /><span>Больница</span></li>
+                        <li><img src="images/infrastructure-map-06.png" alt="" width="38" height="38" /><span>Банк</span></li>
+                        <li><img src="images/infrastructure-map-07.png" alt="" width="38" height="38" /><span>Почта</span></li>
+                        <li><img src="images/infrastructure-map-08.png" alt="" width="38" height="38" /><span>Аптека</span></li>
+                        <li><img src="images/infrastructure-map-09.png" alt="" width="38" height="38" /><span>Кафе</span></li>
                     </ul>
                 </div>
                 <!-- infrastructure list END -->

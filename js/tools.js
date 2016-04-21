@@ -4,11 +4,6 @@
 
         $('.side-link').click(function(e) {
             $('body').toggleClass('hidden-menu');
-            if ($('#map').length > 0) {
-                myMap.container.fitToViewport();
-            }
-            resizeVideo();
-            resizeGallery();
             e.preventDefault();
         });
 
@@ -47,6 +42,12 @@
         $('.callback-close').click(function(e) {
             $('.callback').hide();
             e.preventDefault();
+        });
+
+        $(document).click(function(e) {
+            if ($(e.target).parents().filter('.callback').length == 0 && !$(e.target).hasClass('callback') && !$(e.target).hasClass('callback-link') && !$(e.target).hasClass('map-callback')) {
+                $('.callback').hide();
+            }
         });
 
         $('.map-callback').click(function(e) {
@@ -371,19 +372,36 @@
 
         resizeVideo();
 
+        var videoLoaded = 0;
         $('.slider-content video').each(function() {
-            var curVideo = $(this);
-            curVideo[0].addEventListener('timeupdate', function() {
-                var progress = Math.floor(curVideo[0].currentTime) / Math.floor(curVideo[0].duration);
-                var curIndex = $('.slider-content video').index(curVideo);
-                var curProgress = $('.slider-preview ul li').eq(curIndex).find('span');
-                curProgress.css({'width': Math.floor(progress * curProgress.parent().width())});
-            }, false);
-        });
-
-        $('.slider-content video:first').each(function() {
             $(this)[0].addEventListener('canplay', function() {
-                $('.slider-preview ul li:first a').click();
+                videoLoaded++;
+                if (videoLoaded == $('.slider-content video').length) {
+
+                    $('.slider-content video').each(function() {
+                        var curVideo = $(this);
+                        curVideo[0].addEventListener('timeupdate', function() {
+                            var progress = Math.floor(curVideo[0].currentTime) / Math.floor(curVideo[0].duration);
+                            var curIndex = $('.slider-content video').index(curVideo);
+                            var curProgress = $('.slider-preview ul li').eq(curIndex).find('span');
+                            curProgress.css({'width': Math.floor(progress * curProgress.parent().width())});
+                        }, false);
+                    });
+
+                    $('.slider-content li video').each(function() {
+                        var curVideo = $(this);
+                        curVideo[0].addEventListener('ended', function() {
+                            var curIndex = $('.slider-preview ul li').index($('.slider-preview ul li.active'));
+                            curIndex++;
+                            if (curIndex > $('.slider-preview ul li').length - 1) {
+                                curIndex = 0;
+                            }
+                            $('.slider-preview ul li').eq(curIndex).find('a').click();
+                        });
+                    });
+
+                    $('.slider-preview ul li:first a').click();
+                }
             });
         });
 
@@ -402,6 +420,7 @@
                     curLi.addClass('play');
                     $('.slider-content li').eq(curIndex).find('.slider-bg').hide();
                     curVideo.show();
+                    curVideo[0].muted = true;
                     curVideo[0].play();
                 }
             } else {
@@ -414,6 +433,7 @@
                 $('.slider-content li').eq(curIndex).find('.slider-bg').hide();
 
                 curVideo.show();
+                curVideo[0].muted = true;
                 curVideo[0].play();
             }
 
@@ -554,6 +574,12 @@
                 $('.choose-content area').eq(curIndex).click();
             }
             e.preventDefault();
+        });
+
+        $(window).bind('load resize', function() {
+            if (!$('.choose-window').hasClass('open')) {
+                $('.choose-content area:first').click();
+            }
         });
 
         $('.choose-map-section-number').hover(
