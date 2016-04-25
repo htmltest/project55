@@ -508,6 +508,10 @@
             }, 100);
         });
 
+        $('.choose-form').click(function() {
+            $('body').removeClass('hidden-menu');
+        });
+
         $('.choose-map').maphilight();
 
         $('.choose-content area').click(function(e) {

@@ -125,12 +125,14 @@ form {margin:20px 0; padding:0}
 .wrapper-inner {padding:0 0 141px 0}
 .wrapper-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 
-.side {position:fixed; left:0; top:0; height:100%; z-index:99; background:#121e35}
+.side {position:fixed; left:0; top:0; height:100%; z-index:1020; background:#121e35}
 .side-container {position:relative; width:200px; margin-left:-300px; transition:all .5s ease}
 .hidden-menu .side-container {margin-left:0}
 .side-content {width:200px}
 
 .logo {text-align:center; line-height:0; padding:25px 0 55px 0}
+.logo-mini {line-height:0; position:fixed; left:54px; top:0; z-index:1020; transition:all .5s ease}
+.hidden-menu .logo-mini {top:-55px}
 
 nav {margin:0 20px; font-size:15px}
 nav ul {margin:0; padding:0; list-style:none; border-bottom:1px solid #1b2d50}
@@ -484,7 +486,7 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .hot-preview {line-height:0}
 .hot-preview a {display:block; color:#fff; position:relative}
 .hot-preview img {width:100%}
-.hot-preview div {position:absolute; left:0; top:39px; width:140px; height:34px; font-size:12px; line-height:34px; text-align:center; background:#ef3e23}
+.hot-preview div {position:absolute; left:0; top:39px; width:166px; height:34px; font-size:15px; line-height:34px; text-align:center; background:#ef3e23}
 .hot-title {font-size:24px; line-height:25px; padding:36px 20px 0 20px}
 .hot-date {font-size:16px; line-height:25px; color:#2a4475; padding:23px 20px 0 20px}
 .hot-anonce {font-size:16px; line-height:25px; padding:28px 20px 0 20px}
@@ -774,7 +776,7 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .infrastructure-detail {position:relative; min-height:800px}
 .infrastructure-detail #map {position:absolute; left:0; top:0; width:100%; height:100%}
 
-.infrastructure-list {position:absolute; left:70px; top:40px; width:220px; padding:0 30px; background:#121e35; background:rgba(18, 30, 53, .9); color:#fff}
+.infrastructure-list {position:absolute; left:70px; top:70px; width:220px; padding:0 30px; background:#121e35; background:rgba(18, 30, 53, .9); color:#fff}
 .infrastructure-list-title {font-weight:bold; font-size:20px; line-height:25px; text-transform:uppercase; padding:16px 0 0 0}
 .infrastructure-list-text {padding:11px 0 0 0}
 .infrastructure-list ul {margin:0; padding:27px 0 26px 0; list-style:none}
