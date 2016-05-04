@@ -141,7 +141,7 @@ nav li:before {display:none}
 nav a {display:table; width:200px; color:#fff; margin:-1px 0 -1px -20px; position:relative}
 nav li.active a,
 nav a:hover {background:#2a4475; position:relative; color:#fff}
-nav span {display:table-cell; vertical-align:middle; height:81px; padding:0 20px}
+nav span {display:table-cell; vertical-align:middle; height:71px; padding:0 20px}
 .menu-filter-icon {display:block; position:absolute; right:-54px; top:0; width:54px; height:100%; background:#2a4475 url(../images/menu-filter-icon.png) no-repeat center}
 
 .side-link {position:absolute; right:-54px; top:0; width:54px; height:55px; background:#121e35 url(../images/side-link.png) no-repeat center}
@@ -477,7 +477,7 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .main-info-item-date {font-size:15px; font-style:italic; color:#98a6c1; padding:20px 0 0 0}
 .main-info-item-all {position:absolute; left:0; bottom:60px; width:100%; padding:0 90px 0 0; box-sizing:border-box}
 .main-news .main-info-item-all {padding:0 0 0 90px}
-.main-info-item-all .order-link {display:block; padding:0; text-align:center}
+.main-info-item-all .detail-link {display:block; padding:0; text-align:center}
 
 .hot {padding:60px 70px 62px 70px; max-width:1170px; margin:0 auto}
 .hot:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -506,7 +506,7 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .choose-container {display:table-cell; vertical-align:top}
 
 .choose-content {width:100%; position:relative; background:#f2f3f5; overflow:hidden}
-.choose-wrap {max-width:1065px; height:720px; position:relative; background:url(../images/map.jpg) no-repeat left top}
+.choose-wrap {max-width:1065px; height:720px; position:relative; background:url(../images/map.jpg) no-repeat left top; margin:0 auto}
 @media (min-width:1700px) {
     .choose-content {padding:0 440px 0 0; box-sizing:border-box}
 }
@@ -516,7 +516,7 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .choose-map-section-number {position:absolute; width:40px; height:40px; background:#fff; text-align:center; color:#121e35; font-weight:bold; font-size:20px; line-height:40px; border-radius:20px; cursor:pointer}
 .choose-map-section-number:after {content:""; display:block; width:2px; height:10px; background:#fff; position:absolute; left:50%; bottom:-10px; margin-left:-1px}
 .choose-map-section-number:before {content:""; display:block; width:55px; height:15px; position:absolute; left:18px; top:34px; background:url(../images/choose-map-section-number.png)}
-.choose-map-section-number.disabled {color:#dedfe1}
+.choose-map-section-number.disabled {color:#dedfe1; cursor:default}
 .choose-map-section-number-flats {display:none; position:absolute; right:-15px; top:-15px; width:30px; height:30px; border-radius:15px; color:#fff; text-align:center; font-size:15px; line-height:30px; font-weight:normal}
 .choose-map-section-number-flats-1 {background:#253fa2}
 .choose-map-section-number-flats-2 {background:#629e2a}
