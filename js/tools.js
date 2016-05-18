@@ -296,8 +296,7 @@
         $('.webcam-play').click(function(e) {
             var curLink = $(this);
             var curItem = curLink.parent();
-            curLink.replaceWith('<video src="' + curLink.attr('href') + '" autoplay="autoplay" />');
-            curItem.flowplayer();
+            curItem.addClass('play');
             e.preventDefault();
         });
 
