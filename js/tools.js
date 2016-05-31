@@ -770,6 +770,12 @@
         });
     }
 
+    $(window).bind('load resize scroll', function() {
+        if ($(window).scrollTop() > $('.slider').outerHeight()) {
+            $('.slider-preview ul li.play a').click();
+        }
+    });
+
 })(jQuery);
 
 function initForm() {
