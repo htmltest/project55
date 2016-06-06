@@ -813,7 +813,7 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .popover-content-09 {background:#7c5112}
 .popover-content img {position:absolute; left:0; top:0}
 
-.photo-gallery {position:relative; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; padding:0 100px}
+.photo-gallery {position:relative; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; padding:0 100px; max-width:1190px; margin:0 auto}
 .photo-gallery+.hot {margin-top:-60px}
 .photo-gallery-content {width:100%; position:relative; overflow:hidden}
 .photo-gallery-content ul {margin:0; padding:60px 0; position:relative; display:inline-block; vertical-align:top}
@@ -824,10 +824,10 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .photo-gallery-content ul li img {width:100%}
 .photo-gallery-prev,
 .photo-gallery-next {display:block; width:30px; height:56px; position:absolute; top:50%; margin-top:-28px; background:url(../images/photo-gallery-arrows.png)}
-.photo-gallery-prev {left:40px}
-.photo-gallery-prev:hover {background-position:left -56px}
-.photo-gallery-next {right:40px; background-position:-30px top}
-.photo-gallery-next:hover {background-position:-30px -56px}
+.photo-gallery-prev {left:40px; background-position:left -56px}
+.photo-gallery-prev:hover {background-position:left top}
+.photo-gallery-next {right:40px; background-position:-30px -56px}
+.photo-gallery-next:hover {background-position:-30px top}
 
 .item-gallery {position:fixed; left:-9999px; top:0; width:100%; height:100%; z-index:99997; overflow:auto; background:rgba(0, 35, 103, .85)}
 .item-gallery a:after {display:none}
@@ -838,10 +838,10 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .item-gallery-big strong img {vertical-align:top}
 .item-gallery-prev,
 .item-gallery-next {display:block; width:30px; height:56px; position:absolute; top:50%; margin-top:-28px; background:url(../images/photo-gallery-arrows.png)}
-.item-gallery-prev {left:-70px}
-.item-gallery-prev:hover {background-position:left -56px}
-.item-gallery-next {right:-70px; background-position:-30px top}
-.item-gallery-next:hover {background-position:-30px -56px}
+.item-gallery-prev {left:-70px; background-position:left -56px}
+.item-gallery-prev:hover {background-position:left top}
+.item-gallery-next {right:-70px; background-position:-30px -56px}
+.item-gallery-next:hover {background-position:-30px top}
 .item-gallery-close {display:block; position:absolute; right:-15px; top:-15px; width:30px; height:30px; background:#ef3e23 url(../images/window-close.png) no-repeat center; border-radius:15px}
 .item-gallery-close:hover {background-color:#548fff}
 .item-gallery-big img {vertical-align:middle; position:relative}
