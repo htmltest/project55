@@ -454,7 +454,7 @@ var stopScrollGallery = false;
             curArea.data('maphilight', {"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5, "alwaysOn":true});
             $('.choose-map').maphilight();
 
-            $('.choose-window').addClass('open');
+            $('.choose-window').removeClass('default').addClass('open');
 
             var curIndex = $('.choose-content area').index(curArea);
             $('.choose-window-sections li.active').removeClass('active');
@@ -510,12 +510,6 @@ var stopScrollGallery = false;
                 $('.choose-content area').eq(curIndex).click();
             }
             e.preventDefault();
-        });
-
-        $(window).bind('load resize', function() {
-            if (!$('.choose-window').hasClass('open')) {
-                $('.choose-content area:first').click();
-            }
         });
 
         $('body').on('mouseover', '.choose-map-section-number', function(e) {

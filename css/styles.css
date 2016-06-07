@@ -509,7 +509,7 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .choose {padding:0 0 0 260px; margin:0 0 -60px 0}
 
 .choose-form {position:fixed; left:0; top:0; width:200px; padding:0 30px; height:100%; background:#2a4475; z-index:1000}
-.choose-form form {margin:0; padding:136px 0 40px 0; width:200px}
+.choose-form form {margin:0; padding:66px 0 40px 0; width:200px}
 .choose-form .form-label {color:#fff; margin:19px 0 12px 0}
 .choose-form-submit {padding:32px 0 0 0}
 .choose-form-submit input {vertical-align:top; width:100%; height:50px; margin:0; padding:0; outline:none; text-align:center; border:1px solid #95a2ba; background:transparent; border-radius:3px; -webkit-appearance:none; cursor:pointer; color:#fff; text-transform:uppercase; font:bold 12px/50px "Open Sans", sans-serif}
@@ -524,7 +524,7 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
     .choose-content {padding:0 440px 0 0; box-sizing:border-box}
 }
 
-.choose-map-title {position:absolute; left:48px; top:39px; color:#fff; font-size:14px; line-height:16px; font-style:italic; text-shadow:0 1px 2px rgba(18, 30, 53, .73); padding:0 43px 18px 0; background:url(../images/choose-map-title.png) no-repeat right bottom}
+.choose-map-title {position:absolute; left:48px; top:69px; color:#fff; font-size:14px; line-height:16px; font-style:italic; text-shadow:0 1px 2px rgba(18, 30, 53, .73); padding:0 43px 18px 0; background:url(../images/choose-map-title.png) no-repeat right bottom}
 
 .choose-map-section-number {position:absolute; width:40px; height:40px; background:#fff; text-align:center; color:#121e35; font-weight:bold; font-size:20px; line-height:40px; border-radius:20px; cursor:pointer}
 .choose-map-section-number:after {content:""; display:block; width:2px; height:10px; background:#fff; position:absolute; left:50%; bottom:-10px; margin-left:-1px}
@@ -574,7 +574,11 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .choose-window-title {text-align:center; font-weight:bold; font-size:16px; line-height:20px; color:#121e35; text-transform:uppercase; padding:5px 0 0 0}
 
 .choose-window-build-top {line-height:0; text-align:center; padding:17px 0 0 0}
-.choose-window-build {width:220px; padding:9px 0 13px 0; border:1px solid #cad0dc; margin:0 auto; background:#fff; position:relative}
+.choose-window.default .choose-window-build-top {opacity:.25; padding:52px 0 0 0}
+.choose-window-build {width:220px; min-height:408px; padding:9px 0 13px 0; border:1px solid #cad0dc; margin:0 auto; background:#fff; position:relative}
+.choose-window.default .choose-window-build {opacity:.25}
+.choose-window-build-default-text {position:absolute; left:50%; margin-left:-110px; top:130px; width:220px; text-align:center; font-size:15px; line-height:20px; font-style:italic; color:#121e35; opacity:.7}
+.choose-window-build-default-arrow {position:absolute; left:50%; margin-left:-181px; top:0; width:90px; height:134px; background:url(../images/choose-window-build-default-arrow.png)}
 .choose-window-build-title {position:absolute; left:-92px; top:-23px; padding:0 0 36px 0; background:url(../images/choose-window-build-title.png) no-repeat 28px bottom; font-size:14px; line-height:16px; font-style:italic; color:#737781}
 .choose-window-floor {position:relative; padding:0 10px 2px 10px}
 .choose-window-floor:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -612,6 +616,7 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .choose-window-flat-detail-links .order-link:hover {background:#548fff; border-color:#548fff}
 
 .choose-window-legend {background:url(../images/flatchoose-legend.png) no-repeat center top; padding:33px 0 0 0; text-align:center; font-size:0; line-height:0; letter-spacing:-1px; color:#121e35; white-space:nowrap}
+.choose-window.default .choose-window-legend {opacity:.25}
 .choose-window-legend-item {display:inline-block; vertical-align:top; margin:0 15px}
 .choose-window-legend-item-flat-room {display:inline-block; vertical-align:top; width:15px; height:15px; margin:0 0 0 5px}
 .choose-window-legend-item-flat-room:first-child {margin:0}

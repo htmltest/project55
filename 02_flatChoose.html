@@ -264,11 +264,11 @@
                             <!-- choose wrap END -->
 
                             <!-- choose window -->
-                            <div class="choose-window">
+                            <div class="choose-window default">
                                 <div class="choose-window-inner">
                                     <div class="choose-window-sections">
                                         <ul>
-                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">1</a></li>
                                             <li><a href="#">2</a></li>
                                             <li><a href="#">3</a></li>
                                             <li><a href="#">4</a></li>
@@ -280,7 +280,12 @@
                                     </div>
 
                                     <div class="choose-window-container">
-                                        <div class="choose-window-content"></div>
+                                        <div class="choose-window-content">
+                                            <div class="choose-window-build-top"><img src="files/flatchoose-build-top.png" alt="" width="227" height="46" /></div>
+                                            <div class="choose-window-build"></div>
+                                            <div class="choose-window-build-default-text">Выберите секцию<br />и увидите наши лучшие<br />предложения</div>
+                                            <div class="choose-window-build-default-arrow"></div>
+                                        </div>
                                     </div>
 
                                     <div class="choose-window-legend">
@@ -619,7 +624,6 @@
                                 multiRoute = new ymaps.multiRouter.MultiRoute({
                                     referencePoints: [
                                         'Москва, Белорусский вокзал',
-                                        'Железнодорожная станция Одинцово',
                                         [55.665487, 37.286239],
                                         'Московская область, г. Одинцово, ул. Маковского, д. 26'
                                     ],
