@@ -518,6 +518,19 @@ var stopScrollGallery = false;
                 var curIndex = $('.choose-map-section-number').index(curLi);
                 $('.choose-content area').eq(curIndex).data('maphilight', {"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5, "alwaysOn":true});
                 $('.choose-map').maphilight();
+                var curLeft = e.pageX - $('.choose-wrap').offset().left;
+                var curTop = e.pageY - $('.choose-wrap').offset().top;
+                $('.choose-map-section-list').eq(curIndex).show().css({'left': curLeft, 'top': curTop});
+            }
+        });
+
+        $('body').on('mousemove', '.choose-map-section-number', function(e) {
+            var curLi = $(this);
+            if (!curLi.hasClass('disabled') && !curLi.hasClass('active')) {
+                var curIndex = $('.choose-map-section-number').index(curLi);
+                var curLeft = e.pageX - $('.choose-wrap').offset().left;
+                var curTop = e.pageY - $('.choose-wrap').offset().top;
+                $('.choose-map-section-list').eq(curIndex).css({'left': curLeft, 'top': curTop});
             }
         });
 
@@ -527,7 +540,26 @@ var stopScrollGallery = false;
                 var curIndex = $('.choose-map-section-number').index(curLi);
                 $('.choose-content area').eq(curIndex).data('maphilight', {"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5});
                 $('.choose-map').maphilight();
+                $('.choose-map-section-list').hide();
             }
+        });
+
+        $('body').on('mouseover', '.choose-content area', function(e) {
+            var curIndex = $('.choose-content area').index($(this));
+            var curLeft = e.pageX - $('.choose-wrap').offset().left;
+            var curTop = e.pageY - $('.choose-wrap').offset().top;
+            $('.choose-map-section-list').eq(curIndex).show().css({'left': curLeft, 'top': curTop});
+        });
+
+        $('body').on('mousemove', '.choose-content area', function(e) {
+            var curIndex = $('.choose-content area').index($(this));
+            var curLeft = e.pageX - $('.choose-wrap').offset().left;
+            var curTop = e.pageY - $('.choose-wrap').offset().top;
+            $('.choose-map-section-list').eq(curIndex).css({'left': curLeft, 'top': curTop});
+        });
+
+        $('body').on('mouseout', '.choose-content area', function(e) {
+            $('.choose-map-section-list').hide();
         });
 
         $('body').on('click', '.choose-window-close', function(e) {
