@@ -574,9 +574,9 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .choose-window-title {text-align:center; font-weight:bold; font-size:16px; line-height:20px; color:#121e35; text-transform:uppercase; padding:5px 0 0 0}
 
 .choose-window-build-top {line-height:0; text-align:center; padding:17px 0 0 0}
-.choose-window.default .choose-window-build-top {opacity:.25; padding:52px 0 0 0}
-.choose-window-build {width:220px; min-height:408px; padding:9px 0 13px 0; border:1px solid #cad0dc; margin:0 auto; background:#fff; position:relative}
-.choose-window.default .choose-window-build {opacity:.25}
+.choose-window.default .choose-window-build-top {opacity:.25; padding:42px 0 0 0}
+.choose-window-build {width:220px; padding:9px 0 13px 0; border:1px solid #cad0dc; margin:0 auto; background:#fff; position:relative}
+.choose-window.default .choose-window-build {opacity:.25; min-height:442px}
 .choose-window-build-default-text {position:absolute; left:50%; margin-left:-110px; top:130px; width:220px; text-align:center; font-size:15px; line-height:20px; font-style:italic; color:#121e35; opacity:.7}
 .choose-window-build-default-arrow {position:absolute; left:50%; margin-left:-181px; top:0; width:90px; height:134px; background:url(../images/choose-window-build-default-arrow.png)}
 .choose-window-build-title {position:absolute; left:-92px; top:-23px; padding:0 0 36px 0; background:url(../images/choose-window-build-title.png) no-repeat 28px bottom; font-size:14px; line-height:16px; font-style:italic; color:#737781}
