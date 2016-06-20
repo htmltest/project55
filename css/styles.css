@@ -122,7 +122,7 @@ form {margin:20px 0; padding:0}
 .message-error-text span {text-transform:uppercase; font-weight:bold; color:#121e35; display:block; padding:0 0 9px 0}
 
 .wrapper {min-width:940px; position:relative; min-height:100%}
-.wrapper-inner {padding:0 0 141px 0}
+.wrapper-inner {padding:0 0 181px 0}
 .wrapper-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 
 .side {position:fixed; left:0; top:0; height:100%; z-index:1020; background:#1b2c4d}
@@ -242,7 +242,7 @@ nav span {display:table-cell; vertical-align:middle; height:65px; padding:0 20px
 .map-ways-item-detail-inner ol li:first-child {margin:0}
 .map-ways-item-detail-inner ol li:before {content:counter(point)}
 
-footer {height:141px; position:relative; margin:-141px 0 0 0}
+footer {height:181px; position:relative; margin:-181px 0 0 0}
 .page-choose footer {margin-left:260px}
 .footer-inner {max-width:1170px; margin:0 auto; padding:0 70px; border-top:1px solid #e6e6e6}
 .footer-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -863,3 +863,7 @@ footer {height:141px; position:relative; margin:-141px 0 0 0}
 .choose-map-section-list-row:first-child .choose-map-section-list-name {border-top:none}
 .choose-map-section-list-price {display:table-cell; color:#121e35; border-top:1px solid #e0e4ec; padding:2px 0 7px 0}
 .choose-map-section-list-row:first-child .choose-map-section-list-price {border-top:none}
+
+.footer-mobile-version-link {position:absolute; left:0; bottom:0; background:#fcaf17; width:100%; height:40px; text-align:center; font-size:12px; line-height:40px; font-weight:bold}
+.footer-mobile-version-link a {color:#000; text-decoration:none}
+.footer-mobile-version-link a:after {content:""; display:inline-block; vertical-align:middle; width:17px; height:9px; margin:0 0 0 8px; background:url(../images/arrow-right.png)}
