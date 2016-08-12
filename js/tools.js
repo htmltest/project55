@@ -562,11 +562,16 @@ var stopScrollGallery = false;
             $('.choose-map-section-list').hide();
         });
 
+        $('body').on('click', '.choose-map-open', function(e) {
+            $('.choose-window').addClass('open');
+            e.preventDefault();
+        });
+
         $('body').on('click', '.choose-window-close', function(e) {
             $('.choose-content area').data('maphilight', {"stroke":false, "fillColor":"f8ad14", "fillOpacity":0.5});
             $('.choose-map').maphilight();
             $('.choose-window').removeClass('open');
-             $('.choose-map-section-number').removeClass('active');
+            $('.choose-map-section-number').removeClass('active');
             e.preventDefault();
         });
 

@@ -8,7 +8,7 @@ a:hover {color:#548fff}
 img {border:none}
 
 p {margin:20px 0}
-h1 {text-transform:uppercase; font-weight:bold; font-size:40px; line-height:40px; margin:0 0 33px 0; padding:56px 0 0 0; color:#121e35}
+h1 {text-transform:uppercase; font-weight:bold; font-size:40px; line-height:40px; margin:0 0 33px 0; padding:96px 0 0 0; color:#121e35}
 h2 {text-transform:uppercase; font-weight:bold; font-size:20px; line-height:20px; margin:58px 0 33px 0; padding:0; color:#121e35}
 h1+h2 {margin-top:42px}
 h3 {text-transform:uppercase; font-weight:bold; font-size:16px; line-height:20px; margin:45px 0 20px 0; padding:0; color:#121e35}
@@ -348,7 +348,7 @@ footer {height:181px; position:relative; margin:-181px 0 0 0}
 .plans-compare {float:right; padding:0 0 0 70px; width:50%; box-sizing:border-box; position:relative}
 .plans-compare-text {position:absolute; left:0; bottom:65px; width:100%; padding:0 10px 0 80px; box-sizing:border-box; font-size:12px; line-height:15px; color:#121e35; opacity:.5; text-align:center}
 
-.search {position:absolute; left:50%; bottom:61px; margin-left:-390px; z-index:3; width:780px; height:160px; background:#fff; border-top:3px solid #ef3e23}
+.search {position:absolute; left:50%; bottom:61px; margin-left:-510px; z-index:3; width:1020px; height:160px; background:#fff; border-top:3px solid #ef3e23}
 .search h2 {margin:0 0 20px 0; text-align:center; padding:29px 0 0 0}
 .search-cols {padding:0 0 0 40px}
 .search-cols:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
@@ -506,20 +506,21 @@ footer {height:181px; position:relative; margin:-181px 0 0 0}
 .hot-date {font-size:16px; line-height:25px; color:#2a4475; padding:23px 20px 0 20px}
 .hot-anonce {font-size:16px; line-height:25px; padding:28px 20px 0 20px}
 
-.choose {padding:0 0 0 260px; margin:0 0 -60px 0}
+.choose {padding:0 0 0 224px; margin:0 0 -60px 0}
 
-.choose-form {position:fixed; left:0; top:0; width:200px; padding:0 30px; height:100%; background:#2a4475; z-index:1000}
-.choose-form form {margin:0; padding:66px 0 40px 0; width:200px}
-.choose-form .form-label {color:#fff; margin:19px 0 12px 0}
-.choose-form-submit {padding:32px 0 0 0}
-.choose-form-submit input {vertical-align:top; width:100%; height:50px; margin:0; padding:0; outline:none; text-align:center; border:1px solid #95a2ba; background:transparent; border-radius:3px; -webkit-appearance:none; cursor:pointer; color:#fff; text-transform:uppercase; font:bold 12px/50px "Open Sans", sans-serif}
+.choose-form {position:fixed; left:0; top:0; width:164px; padding:0 30px; height:100%; background:#2a4475; z-index:1000}
+.choose-form form {margin:0; padding:87px 0 40px 0; width:164px}
+.choose-form .form-label {color:#fff; margin:13px 0 11px 0; font-size:15px}
+.choose-form-submit {padding:16px 0 0 0}
+.choose-form-submit input {vertical-align:top; width:100%; height:40px; margin:0; padding:0; outline:none; text-align:center; border:1px solid #95a2ba; background:transparent; border-radius:3px; -webkit-appearance:none; cursor:pointer; color:#fff; text-transform:uppercase; font:bold 12px/38px "Open Sans", sans-serif}
 .choose-form-submit input:hover {border-color:#fff}
-.choose-form-reset {padding:20px 0 0 0}
-.choose-form-reset input {vertical-align:top; width:100%; height:50px; margin:0; padding:0; outline:none; text-align:center; border:1px solid #111d33; background:transparent; border-radius:3px; -webkit-appearance:none; cursor:pointer; color:#121e35; text-transform:uppercase; font:bold 12px/50px "Open Sans", sans-serif}
+.choose-form-reset {padding:11px 0 0 0}
+.choose-form-reset input {vertical-align:top; width:100%; height:40px; margin:0; padding:0; outline:none; text-align:center; border:1px solid #111d33; background:transparent; border-radius:3px; -webkit-appearance:none; cursor:pointer; color:#121e35; text-transform:uppercase; font:bold 12px/38px "Open Sans", sans-serif}
 .choose-form-reset input:hover {border-color:#548fff; color:#548fff}
 
 .choose-content {width:100%; position:relative; background:#f2f3f5; overflow:hidden}
-.choose-wrap {max-width:1065px; height:720px; position:relative; background:url(../images/map.jpg) no-repeat left top; margin:0 auto}
+.choose-wrap {max-width:1065px; height:720px; position:relative; background:url(../images/map.jpg) no-repeat -207px top; margin:0 auto}
+.choose-wrap:before {content:""; display:block; width:207px; height:100%; position:absolute; right:100%; top:0; background:url(../images/map.jpg) no-repeat left top}
 @media (min-width:1700px) {
     .choose-content {padding:0 440px 0 0; box-sizing:border-box}
 }
@@ -548,6 +549,8 @@ footer {height:181px; position:relative; margin:-181px 0 0 0}
 .choose-map-rooms-item-1 .choose-map-rooms-count {background:#253fa2}
 .choose-map-rooms-item-2 .choose-map-rooms-count {background:#629e2a}
 .choose-map-rooms-item-3 .choose-map-rooms-count {background:#c3a256}
+
+.choose-map-open {position:absolute; right:0; top:40px; display:block; width:61px; height:124px; background:url(../images/choose-map-open.png)}
 
 .choose-window {position:absolute; left:100%; margin-left:0; top:0; width:440px; height:100%; background:#f2f3f5; transition:all .5s ease}
 @media (min-width:1700px) {
