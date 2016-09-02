@@ -730,15 +730,18 @@ footer {height:181px; position:relative; margin:-181px 0 0 0}
 .other-flats td.campaign-links {white-space:nowrap}
 .other-flats td.order {width:1%; white-space:nowrap; padding:0}
 
-.flat-header {background:#2a4475; height:55px; padding:0 70px}
-.flat-header-inner {width:980px; margin:0 auto}
-.flat-header-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.flat-header-item {float:left; padding:11px 0 0 50px}
+.flat-header {position:fixed; left:0; bottom:0; width:100%; z-index:99; background:#2a4475; height:60px}
+.flat-header-title {float:left; width:110px; padding:0 0 0 5px; position:relative; text-align:center; font-size:14px; font-weight:bold; line-height:60px; height:60px; background:#1d335d; color:#fff; text-transform:uppercase}
+.flat-header-title:after {content:""; display:block; width:0; height:0; position:absolute; right:-16px; top:50%; margin-top:-28px; border-left:16px solid #1d335d; border-top:28px solid transparent; border-bottom:28px solid transparent}
+.flat-header-back {float:right; width:259px; height:60px; background:#3b5e9f; color:#fff; font-weight:bold; text-transform:uppercase; font-size:14px; line-height:60px; text-align:center}
+.flat-header-back:hover {color:#fff}
+.flat-header-back img {vertical-align:middle; margin:0 21px 0 0}
+.flat-header-inner {margin:0 270px 0 170px}
+.flat-header-wrap {display:table; width:100%; float:left}
+.flat-header-item {display:table-cell; vertical-align:top; padding:16px 0 0 70px}
+.flat-header-item:first-child {padding-left:0}
 .flat-header-item-title {font-size:10px; line-height:16px; color:#98b8f5; text-transform:uppercase}
 .flat-header-item-value {font-size:14px; line-height:16px; color:#fff; font-weight:bold; margin-top:-1px}
-.flat-header-back {float:right; width:300px; height:55px; background:#3b5e9f; color:#fff; font-weight:bold; text-transform:uppercase; font-size:14px; line-height:55px; text-align:center}
-.flat-header-back:hover {color:#fff}
-.flat-header-back img {vertical-align:middle; margin:0 16px 0 0}
 
 .flat-plan {background:#fff; padding:0 70px; position:relative; overflow:hidden}
 .flat-plan:before {content:""; display:block; width:50%; height:100%; position:absolute; right:0; top:0; background:#f2f3f5}
@@ -821,21 +824,27 @@ footer {height:181px; position:relative; margin:-181px 0 0 0}
 .popover-content-09 {background:#7c5112}
 .popover-content img {position:absolute; left:0; top:0}
 
-.photo-gallery {position:relative; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; padding:0 100px; max-width:1190px; margin:0 auto}
+.photo-gallery {position:relative; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; padding:60px 109px; max-width:1180px; margin:0 auto}
+.photo-gallery:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .photo-gallery+.hot {margin-top:-60px}
+.photo-gallery-item {float:left; width:50%; border-left:1px solid #fff; border-right:1px solid #fff; background:#f7f8fa; padding:0 6px; box-sizing:border-box}
+.photo-gallery-item-header {padding:28px 14px 18px 14px; font-size:14px; line-height:25px; letter-spacing:0}
+.photo-gallery-item-header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.photo-gallery-item-title {float:left; font-weight:bold; text-transform:uppercase; color:#121e35}
+.photo-gallery-item-title span {display:inline-block; vertical-align:middle; width:25px; height:25px; background:#2a4475; color:#fff; text-align:center; border-radius:13px; margin:0 5px 0 0}
+.photo-gallery-item-date {float:right; color:#464b54; opacity:.5}
 .photo-gallery-content {width:100%; position:relative; overflow:hidden}
-.photo-gallery-content ul {margin:0; padding:60px 0; position:relative; display:inline-block; vertical-align:top}
-.photo-gallery-content ul li {margin:0; padding:0; display:inline-block; vertical-align:top}
+.photo-gallery-content ul {width:100%; margin:0; padding:0; position:relative; display:inline-block; vertical-align:top}
+.photo-gallery-content ul li {margin:0; padding:0; display:inline-block; vertical-align:top; width:33.33%; padding:0 4px; box-sizing:border-box; position:relative}
 .photo-gallery-content ul li:before {display:none}
-.photo-gallery-content ul li a {display:block; position:relative; margin:0 10px}
-.photo-gallery-content ul li a:hover:after {content:""; display:block; width:100%; height:100%; position:absolute; left:-6px; top:-6px; padding:1px; border:5px solid #538fff}
+.photo-gallery-content ul li a {display:block; position:relative; transition:opacity .5s ease}
+.photo-gallery-content ul li a:hover {opacity:.5}
 .photo-gallery-content ul li img {width:100%}
-.photo-gallery-prev,
-.photo-gallery-next {display:block; width:30px; height:56px; position:absolute; top:50%; margin-top:-28px; background:url(../images/photo-gallery-arrows.png)}
-.photo-gallery-prev {left:40px; background-position:left -56px}
-.photo-gallery-prev:hover {background-position:left top}
-.photo-gallery-next {right:40px; background-position:-30px -56px}
-.photo-gallery-next:hover {background-position:-30px top}
+
+.photo-gallery-ctrl {padding:25px 0 35px 0; text-align:center; height:9px}
+.photo-gallery-ctrl a {display:inline-block; vertical-align:middle; width:9px; height:9px; border-radius:10px; background:#cbcfd7; margin:0 0 0 11px}
+.photo-gallery-ctrl a:first-child {margin:0}
+.photo-gallery-ctrl a.active {background:#ef3e23}
 
 .item-gallery {position:fixed; left:-9999px; top:0; width:100%; height:100%; z-index:99997; overflow:auto; background:rgba(0, 35, 103, .85)}
 .item-gallery a:after {display:none}
