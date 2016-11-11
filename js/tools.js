@@ -799,6 +799,39 @@ var stopScrollGallery = false;
             e.preventDefault();
         });
 
+        $('.infrastructure-map').maphilight();
+
+        $('body').on('mouseover', '.infrastructure-container area', function(e) {
+            var curIndex = $('.infrastructure-container area').index($(this));
+            var curLeft = e.pageX - $('.infrastructure-container').offset().left;
+            var curTop = e.pageY - $('.infrastructure-container').offset().top;
+            $('.infrastructure-map-section-list').eq(curIndex).show().css({'left': curLeft, 'top': curTop});
+        });
+
+        $('body').on('mousemove', '.infrastructure-container area', function(e) {
+            var curIndex = $('.infrastructure-container area').index($(this));
+            var curLeft = e.pageX - $('.infrastructure-container').offset().left;
+            var curTop = e.pageY - $('.infrastructure-container').offset().top;
+            $('.infrastructure-map-section-list').eq(curIndex).css({'left': curLeft, 'top': curTop});
+        });
+
+        $('body').on('mouseout', '.infrastructure-container area', function(e) {
+            $('.infrastructure-map-section-list').hide();
+        });
+
+        $('.infrastructure-map-section-list-progress').each(function() {
+            var curBlock = $(this);
+            var curMax = Number(curBlock.find('.infrastructure-map-section-list-progress-max').html());
+            var curCurrent = Number(curBlock.find('.infrastructure-map-section-list-progress-current').html());
+            var curLimit = Number(curBlock.find('.infrastructure-map-section-list-progress-limit').html());
+            if (curCurrent < curLimit) {
+                curBlock.find('.infrastructure-map-section-list-progress-bar').addClass('red');
+                curBlock.find('.infrastructure-map-section-list-progress-text').css({'margin-left': curCurrent / curMax * 100 + '%'});
+            }
+            curBlock.find('.infrastructure-map-section-list-progress-text span').html(curCurrent);
+            curBlock.find('.infrastructure-map-section-list-progress-bar-status').width(curCurrent / curMax * 100 + '%');
+        });
+
     });
 
     function windowOpen(contentWindow) {
