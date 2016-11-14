@@ -806,6 +806,23 @@ var stopScrollGallery = false;
             var curLeft = e.pageX - $('.infrastructure-container').offset().left;
             var curTop = e.pageY - $('.infrastructure-container').offset().top;
             $('.infrastructure-map-section-list').eq(curIndex).show().css({'left': curLeft, 'top': curTop});
+
+            var curBlock = $('.infrastructure-map-section-list').eq(curIndex).find('.infrastructure-map-section-list-progress');
+            if (curBlock.length == 1) {
+                var curBar = curBlock.find('.infrastructure-map-section-list-progress-bar');
+                var curStatus = curBlock.find('.infrastructure-map-section-list-progress-bar-status');
+                var curText = curBlock.find('.infrastructure-map-section-list-progress-text');
+
+                if (curBlock.find('.infrastructure-map-section-list-progress-bar').hasClass('red')) {
+                    if ((curText.offset().left - curBar.offset().left + curText.width() + 24) > curBar.width()) {
+                        curText.addClass('invert').css({'margin-left': 0});
+                    }
+                } else {
+                    if (curText.width() + 24 > curStatus.width()) {
+                        curText.addClass('invert').css({'margin-left': curStatus.width()});
+                    }
+                }
+            }
         });
 
         $('body').on('mousemove', '.infrastructure-container area', function(e) {
@@ -824,12 +841,14 @@ var stopScrollGallery = false;
             var curMax = Number(curBlock.find('.infrastructure-map-section-list-progress-max').html());
             var curCurrent = Number(curBlock.find('.infrastructure-map-section-list-progress-current').html());
             var curLimit = Number(curBlock.find('.infrastructure-map-section-list-progress-limit').html());
-            if (curCurrent < curLimit) {
-                curBlock.find('.infrastructure-map-section-list-progress-bar').addClass('red');
-                curBlock.find('.infrastructure-map-section-list-progress-text').css({'margin-left': curCurrent / curMax * 100 + '%'});
-            }
+            var curProcent = curCurrent / curMax * 100;
             curBlock.find('.infrastructure-map-section-list-progress-text span').html(curCurrent);
-            curBlock.find('.infrastructure-map-section-list-progress-bar-status').width(curCurrent / curMax * 100 + '%');
+            curBlock.find('.infrastructure-map-section-list-progress-bar-status').width(curProcent + '%');
+
+            if (curProcent < curLimit) {
+                curBlock.find('.infrastructure-map-section-list-progress-bar').addClass('red');
+                curBlock.find('.infrastructure-map-section-list-progress-text').css({'margin-left': curProcent + '%'});
+            }
         });
 
     });
