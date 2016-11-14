@@ -298,7 +298,9 @@ footer {height:181px; position:relative; margin:-181px 0 0 0}
 .infrastructure-map-section-list-progress-bar-status {position:absolute; left:0; top:0; bottom:0; background:#629e2a}
 .infrastructure-map-section-list-progress-bar.red .infrastructure-map-section-list-progress-bar-status {background:#ef3e23}
 .infrastructure-map-section-list-progress-text {position:absolute; left:12px; top:0; white-space:nowrap; color:#fff}
+.infrastructure-map-section-list-progress-text.invert {color:#629e2a}
 .infrastructure-map-section-list-progress-bar.red .infrastructure-map-section-list-progress-text {color:#ef3e23}
+.infrastructure-map-section-list-progress-bar.red .infrastructure-map-section-list-progress-text.invert {color:#fff}
 .infrastructure-map-section-list-progress-values {color:#000; font-size:10px; line-height:12px; padding:4px 0 13px 0}
 .infrastructure-map-section-list-progress-values:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .infrastructure-map-section-list-progress-min {float:left}
