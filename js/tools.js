@@ -927,6 +927,21 @@ var stopScrollGallery = false;
             e.preventDefault();
         });
 
+        $('body').on('click', '.euro-item-title a, .euro-item-preview-inner a', function(e) {
+            $.ajax({
+                type: 'POST',
+                url: $(this).attr('href'),
+                dataType: 'html',
+                cache: false
+            }).done(function(html) {
+                if ($('.window').length > 0) {
+                    windowClose();
+                }
+                windowOpen(html);
+            });
+            e.preventDefault();
+        });
+
     });
 
     function windowOpen(contentWindow) {
@@ -961,6 +976,10 @@ var stopScrollGallery = false;
                     $('.window-loading').remove();
                     $('.window-container').removeClass('window-container-load');
                     windowPosition();
+                    if ($('.window-euro-compare').length > 0) {
+                        $('.window-euro-compare .cocoen').cocoen();
+                        windowPosition();
+                    }
                 }
             });
         } else {

@@ -982,3 +982,34 @@ footer {height:181px; position:relative; margin:-181px 0 0 0}
 .mortgage-results-form-close-link:hover {color:#548fff}
 
 .mortgage-results-hint {font-size:11px; line-height:15px; margin:30px 0 0 0}
+
+.euro-list {margin:0 -40px}
+.euro-item {position:relative; padding:0 40px 1px 40px; margin:0 0 -1px 0}
+.euro-item:before {content:""; display:block; left:40px; right:40px; height:1px; background:#eeeeef; position:absolute; bottom:0}
+.euro-item:hover {z-index:2; background:#fbfbfb}
+.euro-item:hover:before {left:0; right:0; background:#fbfbfb}
+.euro-item-inner {display:table; width:100%}
+.euro-item-content {display:table-cell; vertical-align:middle; padding:40px 100px 40px 0}
+.euro-item-title {text-transform:uppercase; font-weight:bold; color:#ef3e23; font-size:20px}
+.euro-item-title a {color:#ef3e23; text-decoration:none}
+.euro-item-title a:hover {text-decoration:underline}
+.euro-item-anonce {color:#8b8b8b; padding:2px 0 0 0}
+.euro-item-text {padding:44px 0 0 0}
+.euro-item-preview {display:table-cell; vertical-align:middle; padding:40px 0; width:380px}
+.euro-item-preview-inner {height:380px; text-align:center; line-height:380px; background:#fbfbfb}
+.euro-item-preview-inner img {vertical-align:middle; transition:all .5s ease}
+.euro-item:hover .euro-item-preview-inner img {transform:scale(1.2)}
+.euro-text {font-weight:bold; font-size:50px; line-height:60px; color:#ef3e23; text-transform:uppercase; margin:71px 0 110px 0}
+
+.window-euro {width:940px}
+.window-euro-inner {display:table; width:100%}
+.window-euro-content {display:table-cell; vertical-align:middle; padding:0 20px 0 80px}
+.window-euro-compare {display:table-cell; vertical-align:middle; width:380px; padding:0 80px; position:relative; overflow:hidden}
+.window-euro-compare .plans-compare {float:none; width:380px; padding:0}
+.window-euro-compare .plans-compare-text {padding:0; bottom:44px; width:auto; left:0; right:0}
+.window-euro-compare .cocoen {padding:80px 0 115px 0}
+.window-euro-compare .cocoen:before {top:0; left:100%; width:80px}
+.window-euro-compare .cocoen > div:first-child {padding:80px 0 115px 0; background:#fff}
+
+.euro-item-btn {display:block; text-decoration:none; width:100%; height:50px; margin:58px 0 0 0; padding:0; outline:none; text-align:center; border:none; background:#ef3e23; border-radius:3px; -webkit-appearance:none; cursor:pointer; color:#fff; text-transform:uppercase; font:12px/50px "Open Sans", sans-serif}
+.euro-item-btn:hover {background:#548fff; color:#fff}
