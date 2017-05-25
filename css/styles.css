@@ -42,7 +42,7 @@ h2+.news-date {margin:-25px 0 20px 0}
 .order-link:hover,
 .detail-link:hover {color:#006cb7; border-color:#006cb7}
 
-.pager {text-align:center; margin:40px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
+.pager {text-align:center; margin:40px 0; font-size:0; line-height:0; letter-spacing:-1px}
 .pager a {display:inline-block; vertical-align:middle; margin: 0 5px; font-size:14px; line-height:28px; letter-spacing:0; width:28px; height:28px; color:#7fb5db; border:1px solid #7fb5db; border-radius:15px}
 .pager a:hover {color:#006cb7; border-color:#006cb7}
 .pager a.pager-all {width:auto; padding:0 20px; margin-left:7px}
@@ -1013,3 +1013,75 @@ footer {height:181px; position:relative; margin:-181px 0 0 0}
 
 .euro-item-btn {display:block; text-decoration:none; width:100%; height:50px; margin:58px 0 0 0; padding:0; outline:none; text-align:center; border:none; background:#ef3e23; border-radius:3px; -webkit-appearance:none; cursor:pointer; color:#fff; text-transform:uppercase; font:12px/50px "Open Sans", sans-serif}
 .euro-item-btn:hover {background:#548fff; color:#fff}
+
+.new-plans-header {font-size:10px; text-transform:uppercase; margin:61px 0 0 0}
+.new-plans-header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+.new-plans-header-rooms {float:left; margin:0}
+.new-plans-header-rooms li {float:left; margin:0 0 0 30px; padding:0}
+.new-plans-header-rooms li:first-child {margin:0}
+.new-plans-header-rooms li:before {display:none}
+.new-plans-header-rooms li a {color:#7a8288}
+.new-plans-header-rooms li a:hover,
+.new-plans-header-rooms li.active a {color:#ef3e23}
+
+.new-plans-header-sort {float:right; margin:0}
+.new-plans-header-sort li {float:left; margin:0 0 0 30px; padding:0}
+.new-plans-header-sort li:first-child {margin:0}
+.new-plans-header-sort li:before {display:none}
+.new-plans-header-sort li a {color:#7a8288}
+.new-plans-header-sort li a:hover,
+.new-plans-header-sort li.active a {color:#ef3e23}
+.new-plans-header-sort span {display:inline-block; vertical-align:middle; width:7px; height:10px; background:url(../images/new-plans-header-sort.png); margin:0 0 0 7px}
+.new-plans-header-sort span.down {background-position:left top}
+.new-plans-header-sort li a:hover span.down,
+.new-plans-header-sort li.active a span.down {background-position:left -10px}
+.new-plans-header-sort span.up {background-position:-7px top}
+.new-plans-header-sort li a:hover span.up,
+.new-plans-header-sort li.active a span.up {background-position:-7px -10px}
+
+.new-plans-list {margin:40px -10px 54px -10px}
+.new-plans-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.new-plans-item {float:left; border:1px solid #e7e8ea; border-top-color:#f3f4f5; border-bottom-color:#f3f4f5; width:33.33%; box-sizing:border-box; margin:0 -1px -1px 0; position:relative; padding:0 10px; height:211px; color:#7a8288}
+.new-plans-item:hover {color:#7a8288; z-index:2; border-color:#ef3e23}
+.new-plans-preview {float:left; width:50%; padding:0 5px 0 0; box-sizing:border-box; height:189px; line-height:189px; text-align:center; position:relative; overflow:hidden}
+.new-plans-preview img {vertical-align:middle; max-width:100%; max-height:100%}
+.new-plans-content {float:left; width:50%; padding:0 0 0 5px; box-sizing:border-box}
+.new-plans-title {font-weight:bold; font-size:15px; color:#ef3e23; text-transform:uppercase; padding:25px 0 0 0}
+.new-plans-content dl {margin:0; padding:5px 0 0 0}
+.new-plans-content dt {font-size:10px; text-transform:uppercase; color:#7a8288; margin:7px 0 0 0; padding:0}
+.new-plans-content dd {font-size:15px; color:#000; font-weight:bold; margin:-2px 0 0 0; padding:0}
+.new-plans-content dd span {color:#2a4475}
+
+.new-plans-detail {margin:0 265px 0 -45px}
+.new-plans-detail h1 span {color:#ef3e23; font-weight:normal}
+
+.new-plans-detail-inner {padding:0 0 78px 0}
+.new-plans-detail-inner:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.new-plans-detail-text {float:left; width:300px; padding:48px 0 0 0}
+.new-plans-detail-text dl {margin:0; padding:0}
+.new-plans-detail-text dl:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.new-plans-detail-text dt {float:left; clear:left; text-transform:uppercase; font-weight:bold; color:#aaadb3; padding:0 0 20px 0; margin:0}
+.new-plans-detail-text dd {float:right; clear:right; color:#121e35; padding:0 0 20px 0; margin:0}
+.new-plans-detail-text dd.price {color:#ef3e23; font-size:20px; font-weight:bold}
+
+.new-plans-detail-compare {float:right; margin:30px 55px 0 0; width:272px; line-height:0; position:relative}
+.new-plans-detail-compare img {display:block; width:100%}
+.new-plans-detail-compare img:nth-child(2) {position:absolute; left:0; top:0; opacity:0}
+.new-plans-detail-compare.swap img:nth-child(1) {opacity:0}
+.new-plans-detail-compare.swap img:nth-child(2) {opacity:1}
+.new-plans-detail-compare a {display:block; width:41px; height:41px; position:absolute; right:-55px; top:50%; margin-top:-20px; background:url(../images/new-plans-detail-compare.png)}
+
+.new-plans-detail .other-flats {padding-top:12px; max-width:none; margin:0; border-top:1px solid #e7e8ea}
+.new-plans-detail .other-flats h3 {text-align:left; margin-bottom:57px}
+.new-plans-detail .other-flats h3 span {color:#ef3e23}
+
+.new-plans-side {width:310px; background:#f2f3f5; position:absolute; right:0; top:0; bottom:180px; z-index:2}
+.new-plans-side-title {text-align:center; font-weight:bold; text-transform:uppercase; color:#121e35; padding:27px 10px 0 0}
+.new-plans-side-list {position:absolute; left:10px; top:80px; right:10px; bottom:20px; overflow:auto}
+.new-plans-side-list .new-plans-list {margin:0; width:280px; background:#fff; padding:0 0 1px 0}
+.new-plans-side-list .new-plans-list:after {display:none}
+.new-plans-side-list .new-plans-item {display:block; float:none; width:100%; overflow:hidden; border-left-color:#fff; border-right-color:#fff}
+.new-plans-side-list .new-plans-item:hover {border-color:#ef3e23}
+.new-plans-side .jspTrack {background:#c5c8cf}
+.new-plans-side .jspDrag {background:#121e35}

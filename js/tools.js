@@ -942,6 +942,13 @@ var stopScrollGallery = false;
             e.preventDefault();
         });
 
+        $('.new-plans-side-list').jScrollPane({autoReinitialise: true});
+
+        $('.new-plans-detail-compare a').click(function(e) {
+            $(this).parent().toggleClass('swap');
+            e.preventDefault();
+        });
+
     });
 
     function windowOpen(contentWindow) {
